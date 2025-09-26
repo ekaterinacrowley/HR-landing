@@ -1,0 +1,31 @@
+.salary-links {
+    background: var(--Light-Blue, #9FBAF1);
+    padding: 105px 0 160px;
+
+ &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 130px;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 100px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        color: var(--Main-Yellow, #EAF3B2);
+        font-family: "Compliance Sans";
+        font-size: 80px;
+        
+        line-height: 120%;
+        text-transform: uppercase;
+    }
+}
