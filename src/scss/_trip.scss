@@ -303,11 +303,69 @@
         flex-direction: column;
         align-items: stretch;
         gap: 80px;
+        width: 1394px;
 
          &__item {
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+             position: relative;
+
+                &:after {
+                    content: ""; 
+                    position: absolute;
+                }
+
+                &:first-child {
+                    &:after {
+                        top: 52%;
+                        left: 100%;
+                        transform: translate(-13px);
+                        width: 109px;
+                        height: 296px;
+                        background: url(../images/line-13.webp) no-repeat center;
+                        background-size: contain;
+                        z-index: 1;
+                    }
+                }
+                &:nth-child(2) {
+                    &:after {
+                        top: 64%;
+                        left: 100%;
+                        transform: translate(-13px);
+                        width: 109px;
+                        height: 506px;
+                        background: url(../images/line-14.webp) no-repeat center;
+                        background-size: contain;
+                        z-index: 1;
+                    }
+                }
+
+                &:nth-child(3) {
+                    &:after {
+                        top: 56%;
+                        left: 100%;
+                        transform: translate(-13px);
+                        width: 109px;
+                        height: 488px;
+                        background: url(../images/line-15.webp) no-repeat center;
+                        background-size: contain;
+                        z-index: 1;
+                    }
+                }
+                &:nth-child(4) {
+                    &:after {
+                        top: 62%;
+                        left: 100%;
+                        transform: translate(-13px);
+                        width: 109px;
+                        height: 296px;
+                        background: url(../images/line-16.webp) no-repeat center;
+                        background-size: contain;
+                        z-index: 1;
+                    }
+                }
 
             &-number {
                 display: flex;
@@ -327,10 +385,7 @@
 
             &-text {
                 width: 100%;
-                display: flex;
                 padding: 30px 40px;
-                flex-direction: column;
-                align-items: flex-start;
                 gap: 10px;
                 border-radius: 20px;
                 background: var(--Main-Blue, #7280E5);
@@ -346,5 +401,10 @@
             }
         }
 
+        &__decor {
+            position: absolute;
+            top: 230px;
+            left: 150px;
+        }
     }
 }

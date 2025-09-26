@@ -1,0 +1,44 @@
+<footer>
+    <div class="footer main-width">
+       <img src="images/logo.svg" alt="Grown&Scale" />
+       <div class="footer__content">
+            <div class="footer__text">коллега</div>
+            <img src="images/footer-img.webp" alt="decor" />
+       </div>
+    </div>
+
+    <script>
+        const blocks = document.querySelectorAll(".salary");
+        const links = document.querySelectorAll(".salary-links__item");
+
+        links.forEach(link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                const target = link.dataset.link;
+
+                blocks.forEach(block => {
+                if (block.dataset.block === target) {
+                    // показать выбранный
+                    block.style.maxHeight = block.scrollHeight + "px";
+                    block.style.opacity = "1";
+                } else {
+                    // скрыть остальные
+                    block.style.maxHeight = "0";
+                    block.style.opacity = "0";
+                }
+                });
+            });
+        });
+
+        blocks.forEach(block => {
+            const closeBtn = block.querySelector(".close-link");
+            if (closeBtn) {
+                closeBtn.addEventListener("click", e => {
+                e.preventDefault();
+                block.style.maxHeight = "0";
+                block.style.opacity = "0";
+                });
+            }
+        });
+</script>
+</footer> 
