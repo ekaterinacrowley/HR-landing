@@ -192,8 +192,13 @@
             color: var(--Main-Yellow, #EAF3B2);
             text-transform: uppercase;
 
-            img {
+            &:before {
+                content: "";
+                display: inline-block;
                 width: 24px;
+                height: 24px;
+                background: url(../images/arrow.svg) no-repeat center;
+                background-size: contain;
             }
         }
     }
