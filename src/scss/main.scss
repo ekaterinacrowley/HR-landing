@@ -43,10 +43,11 @@
 
 html {
   height: 100%;
-  width: 1900px;
+  width: 1920px;
   margin: 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -135,3 +136,46 @@ p {
 @import 'salary-unplanned';
 @import 'trip';
 @import 'footer';  
+
+body.en {
+  .main-block--salary .main-block__title {
+    width: 975px;
+    margin-left: -345px;
+  }
+  .salary-planned__title--1 {
+    width: 950px;
+  }
+  .salary-planned .principles__item-number {
+    width: 250px;
+  }
+  .salary-planned__title--3 {
+    width: 1050px;
+}
+
+  .salary-planned__title--4 div:nth-child(5) {
+    margin-left: 0;
+  }
+  .salary-planned__title--4 div:nth-child(6) {
+  margin-left: 365px;
+  }
+
+  .salary-planned__title--7 div:first-child {
+    margin-left: 100px;
+  }
+
+    .trip__title--6 {
+      width: 1190px;
+  }
+
+  .trip__title--7 div:nth-child(3) {
+    margin-left: 0;
+}
+  .trip__title--7 div:nth-child(4) {
+      margin-left: auto;
+  }
+
+  .trip__title--8 div:nth-child(4) {
+    margin-left: auto;
+    margin-right: 165px;
+  }
+}

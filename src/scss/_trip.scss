@@ -618,7 +618,7 @@
                     left: 100%;
                     transform: translate(-13px);
                     width: 109px;
-                    height: 464px;
+                    height: 324px;
                     background: url(../images/line-17.webp) no-repeat center;
                     background-size: contain;
                     z-index: 1;
@@ -626,11 +626,11 @@
             }
             &:nth-child(2) {
                 &:after {
-                    top: 60%;
+                    top: 66%;
                     left: 100%;
                     transform: translate(-13px);
                     width: 109px;
-                    height: 412px;
+                    height: 272px;
                     background: url(../images/line-18.webp) no-repeat center;
                     background-size: contain;
                     z-index: 1;
@@ -642,7 +642,7 @@
                     left: 100%;
                     transform: translate(-13px);
                     width: 109px;
-                    height: 352px;
+                    height: 323px;
                     background: url(../images/line-19.webp) no-repeat center;
                     background-size: contain;
                     z-index: 1;
@@ -661,6 +661,7 @@
             &--2 {
                 right: 0;
                 top: -40px; 
+                z-index: 1;
             }
         }
     }

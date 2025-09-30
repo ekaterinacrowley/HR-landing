@@ -36,10 +36,11 @@
 
 html {
   height: 100%;
-  width: 1900px;
+  width: 1920px;
   margin: 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -184,9 +185,6 @@ p {
   padding: 12px 16px;
   cursor: pointer;
   transition: background 0.15s;
-}
-.header .lang-list li:hover {
-  background: #f0f0f0;
 }
 
 .trip .header .lang-btn,
@@ -2394,17 +2392,17 @@ p {
   left: 100%;
   transform: translate(-13px);
   width: 109px;
-  height: 464px;
+  height: 324px;
   background: url(../images/line-17.webp) no-repeat center;
   background-size: contain;
   z-index: 1;
 }
 .trip .steps__item:nth-child(2):after {
-  top: 60%;
+  top: 66%;
   left: 100%;
   transform: translate(-13px);
   width: 109px;
-  height: 412px;
+  height: 272px;
   background: url(../images/line-18.webp) no-repeat center;
   background-size: contain;
   z-index: 1;
@@ -2414,7 +2412,7 @@ p {
   left: 100%;
   transform: translate(-13px);
   width: 109px;
-  height: 352px;
+  height: 323px;
   background: url(../images/line-19.webp) no-repeat center;
   background-size: contain;
   z-index: 1;
@@ -2429,6 +2427,7 @@ p {
 .trip .steps__decor--2 {
   right: 0;
   top: -40px;
+  z-index: 1;
 }
 .trip .travel-department {
   display: flex;
@@ -2723,6 +2722,42 @@ footer .footer__text {
   line-height: 120%;
   text-transform: uppercase;
   margin-top: 20px;
+}
+
+body.en .main-block--salary .main-block__title {
+  width: 975px;
+  margin-left: -345px;
+}
+body.en .salary-planned__title--1 {
+  width: 950px;
+}
+body.en .salary-planned .principles__item-number {
+  width: 250px;
+}
+body.en .salary-planned__title--3 {
+  width: 1050px;
+}
+body.en .salary-planned__title--4 div:nth-child(5) {
+  margin-left: 0;
+}
+body.en .salary-planned__title--4 div:nth-child(6) {
+  margin-left: 365px;
+}
+body.en .salary-planned__title--7 div:first-child {
+  margin-left: 100px;
+}
+body.en .trip__title--6 {
+  width: 1190px;
+}
+body.en .trip__title--7 div:nth-child(3) {
+  margin-left: 0;
+}
+body.en .trip__title--7 div:nth-child(4) {
+  margin-left: auto;
+}
+body.en .trip__title--8 div:nth-child(4) {
+  margin-left: auto;
+  margin-right: 165px;
 }
 
 /*# sourceMappingURL=styles.css.map */

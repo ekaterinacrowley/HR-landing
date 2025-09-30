@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>G&S Team</title>
+  <link rel="stylesheet" href="../styles.css">
+   <!-- <link rel="stylesheet" href="../styles-vw.css" /> -->
+</head> 
+<body>
+  <header>
+	<div class="header main-width">
+		<div class="header__controls"></div>
+		<div class="logo"><img src="images/logo.svg"></div>
+		<div class="header__controls header__controls--lang"><div class="custom-lang-dropdown" id="lang-select-wrapper">
+  <button type="button" class="lang-btn" id="lang-select-btn">
+    <span class="lang-flag flag-en" id="lang-flag-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20">
+          <rect width="28" height="20" fill="#012169"></rect>
+          <polygon points="0,0 4,0 28,16 28,20 24,20 0,4" fill="#ffffff"></polygon>
+          <polygon points="28,0 28,4 4,20 0,20 0,16 24,0" fill="#ffffff"></polygon>
+          <polygon points="0,0 2,0 28,18 28,20 26,20 0,2" fill="#C8102E"></polygon>
+          <polygon points="28,0 28,2 2,20 0,20 0,18 26,0" fill="#C8102E"></polygon>
+          <rect x="12" width="4" height="20" fill="#ffffff"></rect>
+          <rect y="8" width="28" height="4" fill="#ffffff"></rect>
+          <rect x="13" width="2" height="20" fill="#C8102E"></rect>
+          <rect y="9" width="28" height="2" fill="#C8102E"></rect>
+        </svg>
+    </span>
+    <span class="lang-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+        <path d="M4 8L8 8L8 4L4 4L4 8ZM4 -6.99382e-07L0 -8.74228e-07L-1.74846e-07 4L4 4L4 -6.99382e-07ZM12 4L12 8L16 8L16 4L12 4ZM12 12L12 8L8 8L8 12L12 12ZM16 4L20 4L20 0L16 -1.74846e-07L16 4Z" fill="#FDFDF5"></path>
+      </svg>
+    </span>
+  </button>
+  <ul class="lang-list" id="lang-list" hidden="">
+    <li data-value="ru">
+      <a class="lang-flag flag-ru" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+        <rect width="28" height="7" fill="#FDFDF5"></rect>
+        <rect y="7" width="28" height="6" fill="#7280E5"></rect>
+        <rect y="13" width="28" height="7" fill="#D54434"></rect>
+      </svg>
+    </a>
+    </li>
+    <li data-value="en">
+      <a class="lang-flag flag-en" href="/en/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20">
+          <rect width="28" height="20" fill="#012169"></rect>
+          <polygon points="0,0 4,0 28,16 28,20 24,20 0,4" fill="#ffffff"></polygon>
+          <polygon points="28,0 28,4 4,20 0,20 0,16 24,0" fill="#ffffff"></polygon>
+          <polygon points="0,0 2,0 28,18 28,20 26,20 0,2" fill="#C8102E"></polygon>
+          <polygon points="28,0 28,2 2,20 0,20 0,18 26,0" fill="#C8102E"></polygon>
+          <rect x="12" width="4" height="20" fill="#ffffff"></rect>
+          <rect y="8" width="28" height="4" fill="#ffffff"></rect>
+          <rect x="13" width="2" height="20" fill="#C8102E"></rect>
+          <rect y="9" width="28" height="2" fill="#C8102E"></rect>
+        </svg>
+      </a>
+  </li></ul>
+</div>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('lang-select-btn');
+  const list = document.getElementById('lang-list');
+  const wrapper = document.getElementById('lang-select-wrapper');
+
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    list.hidden = !list.hidden;
+    const arrow = btn.querySelector('.lang-arrow');
+    if (!list.hidden) {
+      arrow.classList.add('open');
+    } else {
+      arrow.classList.remove('open');
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!wrapper.contains(e.target)) {
+      list.hidden = true;
+      const arrow = btn.querySelector('.lang-arrow');
+      arrow.classList.remove('open');
+    }
+  });
+});
+</script></div>
+	</div>
+</header>
+  <!-- <include src="header-inset.html"></include> -->
+  <main>
+    <div class="main-block main-width">
+  <div class="main-block__container">
+	<div class="main-block__content">
+		<div class="main-block__title">
+			<div class="main-block__title-text main-block__title-text--1">
+				Grown<span>&</span>Scale</div>
+			<div class="main-block__title-text main-block__title-text--2">
+				portal
+		   </div>
+		</div>
+		<div class="main-block__subtitle">
+			<div class="main-block__subtitle-text main-block__subtitle-text--1">Work is not a wolf</div>
+			<div class="main-block__subtitle-text main-block__subtitle-text--2">Work is just work</div>
+		</div>
+		<div class="main-block__text">
+			<svg xmlns="http://www.w3.org/2000/svg" width="44" height="74" viewBox="0 0 44 74" fill="none">
+			<path d="M29.3334 59V44.3333H14.6667V59H29.3334ZM6.10352e-05 59V73.6666H14.6667V59H6.10352e-05ZM14.6667 29.6666H29.3334V15H14.6667V29.6666ZM44.0001 29.6666H29.3334V44.3333H44.0001V29.6666ZM14.6667 15V0.333313H6.10352e-05V15H14.6667Z" fill="#EAF3B2"></path>
+			</svg>
+			<p>The G&S portal is a unified space where all key information about work is gathered for quick search and adaptation in a new environment.</p>
+		</div>
+	</div>
+	<div class="main-block__image">
+		<img src="../images/top-img.webp" alt="Grown&Scale">
+		<div class="main-block__image-decor main-block__image-decor--1">
+			<img src="../images/arrows.webp" alt="decor">
+		</div>
+		<div class="main-block__image-decor main-block__image-decor--2">
+			<img src="../images/cursor.webp" alt="decor">
+		</div>
+		<div class="main-block__image-decor main-block__image-decor--3">I'm at work</div>
+	</div>
+  </div>
+  <div class="main-block__main-title">
+	<img src="../images/main-title.webp" alt="Grown&Scale">
+  </div>
+</div>
+<div class="main-links">
+	<div class="main-links__container main-width">
+		<div class="main-links__title">
+			<div>choose</div>
+			<div>section</div>
+		</div>
+		<div class="main-links__items">
+			<a href="/en/salary.html" class="main-links__item">
+				<img src="../images/arrow.svg" alt="icon">
+				salary increase
+			</a>
+			<a href="/en/trip.html" class="main-links__item">
+				<img src="../images/arrow.svg" alt="icon">
+				business trip
+			</a>
+		</div>
+	</div>
+</div>
+    <!-- <include src="salary.html"></include> -->
+    <!-- <include src="trip.html"></include> --> 
+  </main> 
+  <footer>
+	<div class="footer main-width">
+	   <img src="images/logo.svg" alt="Grown&Scale">
+	   <div class="footer__content">
+			<div class="footer__text">colleague</div>
+			<img src="images/footer-img.webp" alt="decor">
+	   </div>
+	</div>
+	   <script>
+        const blocks = document.querySelectorAll(".salary");
+        const links = document.querySelectorAll(".salary-links__item");
+
+        links.forEach(link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                const target = link.dataset.link;
+
+                blocks.forEach(block => {
+                if (block.dataset.block === target) {
+                    // показать выбранный
+                    block.style.maxHeight = block.scrollHeight + "px";
+                    block.style.opacity = "1";
+                } else {
+                    // скрыть остальные
+                    block.style.maxHeight = "0";
+                    block.style.opacity = "0";
+                }
+                });
+            });
+        });
+
+        blocks.forEach(block => {
+            const closeBtn = block.querySelector(".close-link");
+            if (closeBtn) {
+                closeBtn.addEventListener("click", e => {
+                e.preventDefault();
+                block.style.maxHeight = "0";
+                block.style.opacity = "0";
+                });
+            }
+        });
+</script>
+</footer> 
+  <script src="lang.js"></script>
+  <script src="main.js"></script>
+</body>
+</html> 
+ 

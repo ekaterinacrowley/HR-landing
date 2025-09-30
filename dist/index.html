@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title data-i18n="title">G&S Team</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>G&S Team</title>
+  <link rel="stylesheet" href="../styles.css">
+  <!-- <link rel="stylesheet" href="../styles-vw.css" /> -->
 </head> 
-<body class="trip">
-  <!-- <include src="header.html"></include> -->
+<body>
   <header>
   <div class="header main-width">
-    <div class="header__controls">
-      <a class="header__back-link" href="index.html">
-       <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-          <rect x="2" y="2" width="52" height="52" rx="10" fill="white" fill-opacity="0.3"></rect>
-          <rect x="2" y="2" width="52" height="52" rx="10" stroke="#FDFDF5" stroke-width="4"></rect>
-          <path d="M25 22L25 26L29 26L29 22L25 22ZM33 22L33 18L29 18L29 22L33 22ZM29 30L25 30L25 34L29 34L29 30ZM21 30L25 30L25 26L21 26L21 30ZM29 34L29 38L33 38L33 34L29 34Z" fill="#FDFDF5"></path>
-        </svg>
-      </a>
-    </div>
+    <div class="header__controls"></div>
     <div class="logo"><img src="images/logo.svg"></div>
     <div class="header__controls header__controls--lang"><div class="custom-lang-dropdown" id="lang-select-wrapper">
   <button type="button" class="lang-btn" id="lang-select-btn">
@@ -36,18 +28,28 @@
   </button>
   <ul class="lang-list" id="lang-list" hidden="">
     <li data-value="ru">
-      <span class="lang-flag flag-ru">
+      <a class="lang-flag flag-ru" href="/">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
         <rect width="28" height="7" fill="#FDFDF5"></rect>
         <rect y="7" width="28" height="6" fill="#7280E5"></rect>
         <rect y="13" width="28" height="7" fill="#D54434"></rect>
       </svg>
-      </span>
+    </a>
     </li>
     <li data-value="en">
-      <span class="lang-flag flag-en">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3238_134572)"><path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F0F0F0"></path><path d="M2.48032 4.69409C1.53771 5.92048 0.826945 7.334 0.413086 8.86958H6.6558L2.48032 4.69409Z" fill="#0052B4"></path><path d="M23.5864 8.86953C23.1725 7.334 22.4617 5.92048 21.5191 4.69409L17.3438 8.86953H23.5864Z" fill="#0052B4"></path><path d="M0.413086 15.1304C0.826992 16.6659 1.53776 18.0794 2.48032 19.3058L6.65566 15.1304H0.413086Z" fill="#0052B4"></path><path d="M19.3053 2.48061C18.0789 1.538 16.6655 0.827236 15.1299 0.41333V6.656L19.3053 2.48061Z" fill="#0052B4"></path><path d="M4.69434 21.5193C5.92073 22.4619 7.33424 23.1727 8.86977 23.5866V17.344L4.69434 21.5193Z" fill="#0052B4"></path><path d="M8.86973 0.41333C7.33419 0.827236 5.92068 1.538 4.69434 2.48056L8.86973 6.65595V0.41333Z" fill="#0052B4"></path><path d="M15.1299 23.5866C16.6654 23.1727 18.0789 22.4619 19.3053 21.5194L15.1299 17.344V23.5866Z" fill="#0052B4"></path><path d="M17.3438 15.1304L21.5191 19.3058C22.4617 18.0795 23.1725 16.6659 23.5864 15.1304H17.3438Z" fill="#0052B4"></path><path d="M23.8984 10.4348H13.5653H13.5653V0.101578C13.0529 0.034875 12.5305 0 12 0C11.4694 0 10.9471 0.034875 10.4348 0.101578V10.4347V10.4347H0.101578C0.034875 10.9471 0 11.4695 0 12C0 12.5306 0.034875 13.0529 0.101578 13.5652H10.4347H10.4347V23.8984C10.9471 23.9651 11.4694 24 12 24C12.5305 24 13.0529 23.9652 13.5652 23.8984V13.5653V13.5653H23.8984C23.9651 13.0529 24 12.5306 24 12C24 11.4695 23.9651 10.9471 23.8984 10.4348Z" fill="#D80027"></path><path d="M15.1309 15.1304L20.4857 20.4852C20.732 20.239 20.9669 19.9817 21.191 19.7148L16.6066 15.1304H15.1309V15.1304Z" fill="#D80027"></path><path d="M8.86951 15.1306H8.86941L3.51465 20.4854C3.76084 20.7317 4.01823 20.9666 4.28504 21.1908L8.86951 16.6062V15.1306Z" fill="#D80027"></path><path d="M8.86976 8.8696V8.86951L3.51495 3.51465C3.26866 3.76084 3.03373 4.01823 2.80957 4.28504L7.39409 8.86955L8.86976 8.8696Z" fill="#D80027"></path><path d="M15.1309 8.86956L20.4857 3.51465C20.2395 3.26837 19.9821 3.03344 19.7153 2.80933L15.1309 7.39384V8.86956Z" fill="#D80027"></path></g><defs><clipPath id="clip0_3238_134572"><rect width="24" height="24" fill="white"></rect></clipPath></defs></svg>
-      </span>
+      <a class="lang-flag flag-en" href="/en/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20">
+          <rect width="28" height="20" fill="#012169"></rect>
+          <polygon points="0,0 4,0 28,16 28,20 24,20 0,4" fill="#ffffff"></polygon>
+          <polygon points="28,0 28,4 4,20 0,20 0,16 24,0" fill="#ffffff"></polygon>
+          <polygon points="0,0 2,0 28,18 28,20 26,20 0,2" fill="#C8102E"></polygon>
+          <polygon points="28,0 28,2 2,20 0,20 0,18 26,0" fill="#C8102E"></polygon>
+          <rect x="12" width="4" height="20" fill="#ffffff"></rect>
+          <rect y="8" width="28" height="4" fill="#ffffff"></rect>
+          <rect x="13" width="2" height="20" fill="#C8102E"></rect>
+          <rect y="9" width="28" height="2" fill="#C8102E"></rect>
+        </svg>
+      </a>
   </li></ul>
 </div>
 <script>
@@ -56,29 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const btn = document.getElementById('lang-select-btn');
   const list = document.getElementById('lang-list');
   const wrapper = document.getElementById('lang-select-wrapper');
-  let current = localStorage.getItem('lang') || (window.location.pathname.startsWith('/en/') ? 'en' : 'ru');
-
-  function setActive(val) {
-    localStorage.setItem('lang', val);
-
-    // Обновляем флаг на кнопке
-    if (btn) {
-      const flag = btn.querySelector('.lang-flag');
-      if (val === 'ru') {
-        flag.className = 'lang-flag flag-ru';
-        flag.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
-          <rect width="28" height="7" fill="#FDFDF5"/>
-          <rect y="7" width="28" height="6" fill="#7280E5"/>
-          <rect y="13" width="28" height="7" fill="#D54434"/>
-        </svg>`;
-      } else {
-        flag.className = 'lang-flag flag-en';
-        flag.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3238_134572)"><path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F0F0F0" /><path d="M2.48032 4.69409C1.53771 5.92048 0.826945 7.334 0.413086 8.86958H6.6558L2.48032 4.69409Z" fill="#0052B4" /><path d="M23.5864 8.86953C23.1725 7.334 22.4617 5.92048 21.5191 4.69409L17.3438 8.86953H23.5864Z" fill="#0052B4" /><path d="M0.413086 15.1304C0.826992 16.6659 1.53776 18.0794 2.48032 19.3058L6.65566 15.1304H0.413086Z" fill="#0052B4" /><path d="M19.3053 2.48061C18.0789 1.538 16.6655 0.827236 15.1299 0.41333V6.656L19.3053 2.48061Z" fill="#0052B4" /><path d="M4.69434 21.5193C5.92073 22.4619 7.33424 23.1727 8.86977 23.5866V17.344L4.69434 21.5193Z" fill="#0052B4" /><path d="M8.86973 0.41333C7.33419 0.827236 5.92068 1.538 4.69434 2.48056L8.86973 6.65595V0.41333Z" fill="#0052B4" /><path d="M15.1299 23.5866C16.6654 23.1727 18.0789 22.4619 19.3053 21.5194L15.1299 17.344V23.5866Z" fill="#0052B4" /><path d="M17.3438 15.1304L21.5191 19.3058C22.4617 18.0795 23.1725 16.6659 23.5864 15.1304H17.3438Z" fill="#0052B4" /><path d="M23.8984 10.4348H13.5653H13.5653V0.101578C13.0529 0.034875 12.5305 0 12 0C11.4694 0 10.9471 0.034875 10.4348 0.101578V10.4347V10.4347H0.101578C0.034875 10.9471 0 11.4695 0 12C0 12.5306 0.034875 13.0529 0.101578 13.5652H10.4347H10.4347V23.8984C10.9471 23.9651 11.4694 24 12 24C12.5305 24 13.0529 23.9652 13.5652 23.8984V13.5653V13.5653H23.8984C23.9651 13.0529 24 12.5306 24 12C24 11.4695 23.9651 10.9471 23.8984 10.4348Z" fill="#D80027" /><path d="M15.1309 15.1304L20.4857 20.4852C20.732 20.239 20.9669 19.9817 21.191 19.7148L16.6066 15.1304H15.1309V15.1304Z" fill="#D80027" /><path d="M8.86951 15.1306H8.86941L3.51465 20.4854C3.76084 20.7317 4.01823 20.9666 4.28504 21.1908L8.86951 16.6062V15.1306Z" fill="#D80027" /><path d="M8.86976 8.8696V8.86951L3.51495 3.51465C3.26866 3.76084 3.03373 4.01823 2.80957 4.28504L7.39409 8.86955L8.86976 8.8696Z" fill="#D80027" /><path d="M15.1309 8.86956L20.4857 3.51465C20.2395 3.26837 19.9821 3.03344 19.7153 2.80933L15.1309 7.39384V8.86956Z" fill="#D80027" /></g><defs><clipPath id="clip0_3238_134572"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>`;
-      }
-    }
-  }
-
-  setActive(current);
 
   btn.addEventListener('click', function(e) {
     e.stopPropagation();
@@ -89,22 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       arrow.classList.remove('open');
     }
-  });
-
-  list.querySelectorAll('li').forEach(li => {
-    li.addEventListener('click', function() {
-      const val = li.getAttribute('data-value');
-      setActive(val);
-      list.hidden = true;
-      const arrow = btn.querySelector('.lang-arrow');
-      arrow.classList.remove('open');
-      // Перенаправление на нужную страницу
-      if (val === 'en') {
-        window.location.href = '/en/';
-      } else {
-        window.location.href = '/';
-      } 
-    });
   });
 
   document.addEventListener('click', function(e) {
@@ -120,571 +83,66 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
+  <!-- <include src="header-inset.html"></include> -->
   <main>
-    <!-- <include src="index.html"></include>
-    <include src="salary.html"></include> -->
-    <div class="main-block main-block--trip main-width">
+        <div class="main-block main-width">
   <div class="main-block__container">
     <div class="main-block__content">
         <div class="main-block__title">
             <div class="main-block__title-text main-block__title-text--1">
-               командировка
-            </div>
-        </div>
-        <div class="main-block__text">
-           <svg xmlns="http://www.w3.org/2000/svg" width="44" height="74" viewBox="0 0 44 74" fill="none">
-            <path d="M29.3333 59L29.3333 44.3333L14.6667 44.3333L14.6667 59L29.3333 59ZM0 59L0 73.6666H14.6667L14.6667 59H0ZM14.6667 29.6666H29.3333V15L14.6667 15L14.6667 29.6666ZM44 29.6666L29.3333 29.6666L29.3333 44.3333H44V29.6666ZM14.6667 15L14.6667 0.333313L0 0.333313L0 15L14.6667 15Z" fill="#1D1D1D"></path>
-            </svg>
-            <p>Основные правила и этапы оформления командировок и деловых поездок за счет компании, особенности процесса, чек-лист командируемого и другое</p>
+                Grown<span>&</span>Scale</div>
+            <div class="main-block__title-text main-block__title-text--2">
+                портал
+           </div>
         </div>
         <div class="main-block__subtitle">
             <div class="main-block__subtitle-text main-block__subtitle-text--1">работа не волк</div>
-            <div class="main-block__subtitle-text main-block__subtitle-text--2">волк - это командировка</div>
+            <div class="main-block__subtitle-text main-block__subtitle-text--2">работа это work</div>
         </div>
-        <div class="main-block__content-decor main-block__content-decor--1">
-            <img src="images/trip-decor-1.svg" alt="decor">
-        </div>
-        <div class="main-block__content-decor main-block__content-decor--2">
-            <img src="images/trip-decor-2.svg" alt="decor">
+        <div class="main-block__text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="74" viewBox="0 0 44 74" fill="none">
+            <path d="M29.3334 59V44.3333H14.6667V59H29.3334ZM6.10352e-05 59V73.6666H14.6667V59H6.10352e-05ZM14.6667 29.6666H29.3334V15H14.6667V29.6666ZM44.0001 29.6666H29.3334V44.3333H44.0001V29.6666ZM14.6667 15V0.333313H6.10352e-05V15H14.6667Z" fill="#EAF3B2"></path>
+            </svg>
+            <p>G&S-портал — это единое пространство, где собрана ключевая информация о работе для быстрого поиска и адаптации на новом месте</p>
         </div>
     </div>
     <div class="main-block__image">
-        <img src="images/main-block-trip-img.webp" alt="Grown&Scale">
+        <img src="images/top-img.webp" alt="Grown&Scale">
         <div class="main-block__image-decor main-block__image-decor--1">
-            <img src="images/arrows-2.webp" alt="decor">
+            <img src="images/arrows.webp" alt="decor">
         </div>
-        <div class="main-block__image-decor main-block__image-decor--3">лечу в чебоксары</div>
+        <div class="main-block__image-decor main-block__image-decor--2">
+            <img src="images/cursor.webp" alt="decor">
+        </div>
+        <div class="main-block__image-decor main-block__image-decor--3">я на работе</div>
     </div>
+  </div>
+  <div class="main-block__main-title">
+    <img src="images/main-title.webp" alt="Grown&Scale">
   </div>
 </div>
  
-
-    <div class="trip__block trip__block--1">
-        <div class="trip__main-title">
-            <img src="images/trip-main-title.svg" alt="trip">
+    <div class="main-links">
+    <div class="main-links__container main-width">
+        <div class="main-links__title">
+            <div>выбери</div>
+            <div>раздел</div>
         </div>
-        <div class="trip__container trip__container--1 main-width">
-            <div class="trip__title trip__title--1">
-                <div>1</div>
-                <div>основные</div>
-                <div>правила</div>
-            </div> 
-            <div class="main-rules__note">
-                Решение о направлении в командировку
-            </div>
-            <div class="main-rules">
-                <div class="main-rules__items">
-                    <div class="main-rules__item">
-                        Решение о направлении в командировку принимает <b>C- Level руководитель — Дживан М.</b> и в некоторых случаях лид команды в зависимости от цели поездки. Командируемый сотрудник заполняет и направляет заявку в определенном формате на командировку в HR. 
-                    </div>
-                     <div class="main-rules__item">
-                        Сотрудник направляет в HR заявку на согласование командировки <b>не менее чем за 7-10 рабочих дней</b> <br>до предполагаемой даты поездки (без учета сроков оформления визы в страну командировки, если применимо).
-                    </div>
-                     <div class="main-rules__item">
-                        HR согласовывает заявку с прямым руководителем и при необходимости с C-Level руководителем — Дживаном М. В случае положительного ответа HR направляет инструкцию по командировкам и сотрудник начинает самостоятельную работу с Travel-отделом (ниже подробнее).
-                    </div>
-                     <div class="main-rules__item">
-                        Ответственный HR за получение и обработку запросов на командировки —  <b>Виктория Седаш</b>, People Partner, Reddy 68139125607.
-                    </div>
-                     <div class="main-rules__item">
-                        Внимательно ознакомьтесь с правилами оформления командировочной поездки от Travel-отдела <br>при планировании поездки.
-                    </div>
-                     <div class="main-rules__item">
-                        На каждого сотрудника, направляющегося в поездку, заполняется <b>отдельная заявка</b>.
-                    </div>
-                </div>
-                <div class="main-rules__dop">
-                    <div class="main-rules__warning">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="74" viewBox="0 0 25 74" fill="none">
-                            <path d="M22.5013 4.9316V2.46576H20.0026V0H17.5038H15.0051H12.5064H10.0077H7.50895H4.99743V2.46576H2.49875V4.9316H0V7.39744V9.86321V12.329V14.7949V17.2607V19.7265V22.1923V24.6581V27.1239H2.49875V29.6023V32.0681V34.534V36.9997V39.4656H4.99743V41.9313V44.3972V46.863V49.3288H7.50895V51.7946V54.2605V56.7262H10.0077H12.5064H15.0051H17.5038V54.2605V51.7946V49.3288H20.0026V46.863V44.3972V41.9313V39.4656H22.5013V36.9997V34.534V32.0681V29.6023V27.1239H25V24.6581V22.1923V19.7265V17.2607V14.7949V12.329V9.86321V7.39744V4.9316H22.5013Z" fill="#D54434"></path>
-                            <path d="M17.5039 61.6699H15.0053H12.5065H10.0078H7.50907V64.1358H4.99756V66.6016V69.0674V71.5332H7.50907V73.999H10.0078H12.5065H15.0053H17.5039V71.5332H20.0027V69.0674V66.6016V64.1358H17.5039V61.6699Z" fill="#D54434"></path>
-                        </svg>
-                        Случаи несогласованных поездок отслеживаются 
-                        и могут привести к вычету стоимости поездки 
-                        из оклада сотрудника.
-                    </div>
-                    <div class="main-rules__images">
-                        <div>
-                            <img src="images/rules-img-1.webp">
-                            <div>когда в командировке надо работать работу</div>
-                            <img src="images/rules-img-2.webp">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-rules__decor main-rules__decor--1">
-                <img src="images/trip-decor-3.svg" alt="trip">
-            </div>
-             <div class="main-rules__decor main-rules__decor--2">
-                <img src="images/trip-decor-4.svg" alt="trip">
-            </div>
-             <div class="main-rules__decor main-rules__decor--3">
-                <img src="images/trip-decor-3.svg" alt="trip">
-            </div>
+        <div class="main-links__items">
+            <a href="/salary.html" class="main-links__item">
+                <img src="images/arrow.svg" alt="icon">
+                увеличение оклада
+            </a>
+            <a href="trip.html" class="main-links__item">
+                <img src="images/arrow.svg" alt="icon">
+                командировка
+            </a>
         </div>
     </div>
-    <div class="trip__block trip__block--2">
-        <div class="trip__container trip__container--2 main-width">
-            <div class="trip__title trip__title--2">
-                <div>типы</div>
-                <div>командировок</div>
-            </div> 
-            <div class="types">
-                <div class="types__items">
-                    <div class="types__title">
-                        по разновидности
-                    </div>
-                    <div class="types__item">
-                        <b>Внешнее мероприятие</b>
-                        Любой ивент или выставка, посещение которой имеет бизнес-цель для команды или Компании, включая повышение узнаваемости бренда, укрепление лояльности клиентов, расширение клиентской базы, а также налаживание и поддержание деловых связей. 
-                    </div>
-                     <div class="types__item">
-                        <b>Деловая поездка</b>
-                        Деловая поездка в один из офисов подразделения —  поездка с бизнес-целью, а именно: переговоры, выстраивание связей, стратегические сессии, встреча с удаленными командами и другие цели, несущие бизнес-результат для сотрудника, команды и/или всего подразделения в целом.
-                    </div>
-                </div>
-                <div class="types__items">
-                    <div class="types__title">
-                        по длительности
-                    </div>
-                    <div class="types__item">
-                        <b>Краткосрочные</b>
-                        Продолжительность командировки до 2-х недель.
-                    </div>
-                     <div class="types__item">
-                        <b>Долгосрочные</b>
-                        Продолжительность командировки более 2 недель.
-                    </div>
-                    <div class="types__image">
-                        <img src="images/types-img.webp">
-                        <div class="types__decor types__decor--1">
-                            <img src="images/trip-decor-1.svg">
-                        </div>   
-                         <div class="types__decor types__decor--2">
-                            <img src="images/arrows-2.webp">
-                        </div>                    
-                    </div>
-                </div>
-            </div>
-             <div class="types__decor types__decor--3">
-                <img src="images/trip-decor-5.svg">
-            </div> 
-        </div>
-    </div>
-    <div class="trip__block trip__block--3">
-        <div class="trip__main-title">
-            <img src="images/trip-main-title-2.svg" alt="trip">
-        </div>
-        <div class="trip__container trip__container--3 main-width">
-            <div class="trip__title trip__title--3">
-                <div>правила</div>
-                <div>направления</div>
-                <div>на внешние</div>
-                <div>мероприятия</div>
-                <div>и</div>
-                <div>выставки</div>
-            </div> 
-            <div class="rules">
-                <div class="rules__item">
-                    <div class="rules__item-number">1</div>
-                    <div class="rules__item-text">
-                       Финальное согласование всех командировок на внешние мероприятия <br>и выставки принимает <b>C- Level руководитель — Дживан М.</b>
-                    </div>
-                </div>
-                <div class="rules__item">
-                    <div class="rules__item-number">2</div>
-                    <div class="rules__item-text">
-                        Лимит на участие — <b>не более 4 сотрудников от одной команды</b>. Правило касается любого выезда на мероприятия.
-                    </div>
-                </div>
-                <div class="rules__item">
-                    <div class="rules__item-number">3</div>
-                    <div class="rules__item-text">
-                        Только следующие команды могут инициировать участие в мероприятиях:
-                        <ul>
-                            <li>Команда Payment Expansion Dep. / MENA Subdiv;</li>
-                            <li>Команды Country Management / MENA Subdiv;</li>
-                            <li>Команда Mobicash / MENA Subdiv;</li>
-                            <li>Команда CIS/Global Subdiv;</li>
-                            <li>Команда Melbet MENA Subdiv;</li>
-                            <li>Команда China Dep.</li>
-                        </ul>
-                        Заявки от других команд рассматриваются только при наличии отдельного подтверждения от C- Level руководителя — Дживан М.
-                    </div>
-                </div>
-                <div class="rules__item">
-                    <div class="rules__item-number">4</div>
-                    <div class="rules__item-text">Общее ограничение по количеству участников одного мероприятия — <b>максимум 10 сотрудников</b> от всех команд подразделения.</div>
-                </div>
-                <div class="rules__item">
-                    <div class="rules__item-number">5</div>
-                    <div class="rules__item-text">Если каждая команда предоставит по 4 сотрудника, финальный состав (до 10 человек) в любом случае будет определять C- Level руководитель — Дживан М.</div>
-                </div>
-             </div>
-             <div class="rules__decor">
-                <img src="images/trip-decor-6.svg">
-            </div>
-        </div>
-    </div>
-    <div class="trip__block trip__block--4">
-        <div class="trip__container trip__container--4 main-width">
-            <div class="trip__title trip__title--4">
-                <div>этапы</div>
-                <div>согласования</div>
-            </div> 
-            <div class="steps">
-                 <div class="steps__item">
-                    <div class="steps__item-number">
-                       этап 1
-                    </div>
-                    <div class="steps__item-text">
-                        Пересмор производится в рамках текущей должности  сотрудника. Если в оффере было условие изменения оклада после испытательного срока, изменение не считается пересмотром и не подается в списке на изменение оклада. 
-                    </div>
-                </div>
-                <div class="steps__item">
-                    <div class="steps__item-number">
-                       этап 2
-                    </div>
-                    <div class="steps__item-text">
-                  Руководитель подразделения оценивает работу своих сотрудников и свою (при необходимости), определяет список участников пересмотра. Если у сотрудника меняется должность, он может быть добавлен в общий список 
-на общих условиях только в случае, если требуется согласование изменения с руководителем подразделения.
-                    </div>
-                </div>
-                <div class="steps__item">
-                    <div class="steps__item-number">
-                       этап 3
-                    </div>
-                    <div class="steps__item-text">
-                  Руководитель определяет суммы новых окладов согласно матрице, рынку зарплат на схожих позициях и сроку предыдущего пересмотра.
-                    </div>
-                </div>
-                <div class="steps__item">
-                    <div class="steps__item-number">
-                       этап 4
-                    </div>
-                    <div class="steps__item-text">
-                        Руководитель готовит письменное обоснование 
-        для пересмотра по каждому сотруднику, в том числе 
-        по своей работе (см. ч. Требования к обоснованиям)
-                    </div>
-                </div>
-            </div>
-            <div class="steps__decor steps__decor--1">
-                <img src="images/trip-decor-7.svg" alt="trip">
-            </div>
-             <div class="steps__decor steps__decor--2">
-                <img src="images/trip-main-title-3.svg" alt="trip">
-            </div>
-        </div>
-    </div>
-    <div class="trip__block trip__block--5">
-        <div class="trip__container trip__container--5 main-width">
-            <div class="trip__title trip__title--5">
-                <div>работа</div>
-                <div>с</div>
-                <div>travel-отделом</div>
-            </div> 
-            <div class="travel-department">
-                <div class="travel-department__item">
-                    <div class="travel-department__item-number">1</div>
-                    <div class="travel-department__item-text">После получения чек-листа от HR сотрудник изучает правила оформления командировок 
-и самостоятельно заполняет google-форму на командировку.</div>
-                </div>
-                 <div class="travel-department__item">
-                    <div class="travel-department__item-number">2</div>
-                    <div class="travel-department__item-text">Travel-отдел получает форму и назначает Travel - менеджера для дальнейшей работы 
-с командируемым сотрудником напрямую. </div>
-                </div>
-                 <div class="travel-department__item">
-                    <div class="travel-department__item-number">3</div>
-                    <div class="travel-department__item-text">В форме на командировку можно указать все ваши пожелания и детали по поездке в разделе Комментарий.</div>
-                </div>
-                 <div class="travel-department__item">
-                    <div class="travel-department__item-number">4</div>
-                    <div class="travel-department__item-text">Перед покупкой билетов на проезд (поезд, самолет, автобус и т.д.), а также при бронировании жилья, можно уточнить доступные и актуальные лимиты на текущий день через чат-бот Travel-отдела (Reddy 72220000943).</div>
-                </div>
-                 <div class="travel-department__item">
-                    <div class="travel-department__item-number">5</div>
-                    <div class="travel-department__item-text">Командируемый сотрудник может получить сумму на командировочные расходы до или после поездки. Сотрудник самостоятельно запрашивает расчет суммы командировочных расходов 
-через Travel - менеджера.</div>
-                </div>
-                 <div class="travel-department__item">
-                    <div class="travel-department__item-number">6</div>
-                    <div class="travel-department__item-text">Как правило командировочные можно получить в офисе отправления у старшего по офису, офис-менеджера или People Partner по прямому запросу от командируемого сотрудника. </div>
-                </div>
-                 <div class="travel-department__item">
-                    <div class="travel-department__item-number">7</div>
-                    <div class="travel-department__item-text">После получения информации о сумме сотрудник информирует ответственного за выплату 
-и получает средства на поездку. При необходимости контактные данные по ответственным 
-за выплату командировочных можно запросить у HR сотрудника (Виктория Седаш).</div>
-                </div>
-                 <div class="travel-department__item">
-                    <div class="travel-department__item-number">8</div>
-                    <div class="travel-department__item-text">После согласования деталей поездки сотрудник информирует ответственного HR о получении полного пакета документов на поездку от Travel-отдела.</div>
-                </div>
-                 <div class="travel-department__item">
-                    <div class="travel-department__item-number">9</div>
-                    <div class="travel-department__item-text">Перенос доступов. При поездке в один из наших офисов и при необходимости осуществляется перенос доступов. Сотрудник запрашивает у своего прямого руководителя перенос доступов, который осуществляется через заявку в jsm. Если сотрудник является управляющим своей MBG группы, он может самостоятельно направить заявку на перенос. </div>
-                </div>
-                 <div class="travel-department__item">
-                    <div class="travel-department__item-number">10</div>
-                    <div class="travel-department__item-text">HR информирует принимающую сторону о приезде сотрудника, подтверждает данные о наличии рабочего места сотруднику. </div>
-                </div>
-            </div>
-            <div class="travel-department__image">
-                <img src="images/travel-department-img.webp" alt="trip">
-                <div>я в командировке на кипре</div>
-            </div>
-            <div class="travel-department__decor travel-department__decor--1">
-                <img src="images/trip-decor-5.svg" alt="trip">
-            </div>
-             <div class="travel-department__decor travel-department__decor--2">
-                <img src="images/trip-decor-5.svg" alt="trip">
-            </div>
-        </div>
-    </div>
-    <div class="trip__block trip__block--6">
-         <div class="trip__main-title">
-            <img src="images/trip-main-title-4.svg" alt="Grown&Scale"> 
-        </div>
-        <div class="trip__container trip__container--6 main-width">
-            <div class="trip__title trip__title--6">
-                <div>командировочные</div>
-                <div>расходы</div>
-                <div>и</div>
-                <div>их</div>
-                <div>возмещение</div>
-            </div> 
-            <div class="expenses">
-               <div class="expenses__item">
-                  Основное правило — <b>отправляющая сторона</b> выплачивает командировочные.
-                </div>
-                 <div class="expenses__item">
-                    Получение командировочных/суточных в принимающем офисе возможно в случае, если это заранее согласовано между отправляющим и принимающим офисами. 
-                </div>
-                <div class="expenses__item">
-Выдачей средств занимаются People Partners, офис-менеджеры или старшие по офису в каждом офисе 
-или в отправляющем офисе. При необходимости контактные данные по ответственным за выплату командировочных можно запросить <b>у HR сотрудника (Виктория Седаш)</b>. 
-                </div>
-                 <div class="expenses__item">
-С точки зрения финансовой отчетности командировочные рекомендуется получать после поездки, если их выдает отправляющий офис.
-                </div>
-                 <div class="expenses__item">
-Возврат расходов на транспорт, представительские расходы можно запросить вместе с командировочными после поездки.
-                </div>
-                 <div class="expenses__item">
-Возврату подлежат расходы за поездки на такси в и из аэропорта, представительские расходы возмещаются 
-<br><b>по согласованию с руководителем</b>.
-                </div>
-                 <div class="expenses__item">
-Все компенсации и возвраты средств осуществляются строго при наличии подтверждающих документов: 
-чеки об оплате, маршрутные квитанции, счета. <b>Возврат средств без документального подтверждения 
-не осуществляется</b>. 
-                </div>
-                 <div class="expenses__item">
-Подтверждающие документы и запросы на возврат расходов по поездке командируемый сотрудник направляет самостоятельно старшему по офису, офис-менеджеру или People Partner в своем офисе. 
-                </div>
-                 <div class="expenses__item">
-Расходы списываются по кассе проекта, в котором работает отправляемый в поездку сотрудник.
-                </div>
-                 <div class="expenses__item">
-Командировочные расходы списываются по кассе того офиса, который их выплачивал.
-                </div>
-                 <div class="expenses__item">
-В случае возникновения вопросов по списанию или оплатам необходимо обратиться к офис-менеджеру, People Partner или финансовому специалисту в том офисе, откуда сотрудник направляется в командировку.  
-                </div>
-            </div>
-        </div>
-        <div class="expenses__decor">
-        </div>
-    </div>
-    <div class="trip__block trip__block--7">
-        <div class="trip__container trip__container--7 main-width">
-            <div class="trip__title trip__title--7">
-                <div>информирование</div>
-                <div>отправляющейс</div>
-                <div>и</div>
-                <div>принимающей</div>
-                <div>сторон</div>
-            </div> 
-            <div class="informing">
-                <div class="informing__item">
-                   Ответсвенный HR информирует принимающий офис о командируемом сотруднике, сообщает данные сотрудника, даты и срок командировки, сообщает 
-о необходимости организации рабочего места.
-                </div>
-                 <div class="informing__item">
-                    Принимающая сторона при необходимости организовывает рабочее место, обеспечивает доступ в офис 
-для командированного сотрудника.
-                </div>
-                    <div class="informing__item">
-                        <b>Как получить информацию о предстоящих ивентах/выставках</b>
-                        Данные о выставках и ивентах, в которых принимает участие Компания, 
-                        <br>можно получить через HR.
-                    </div>
-            </div>
-            <div class="informing__decor informing__decor--1">
-                <img src="images/trip-decor-8.svg" alt="trip">
-            </div>
-            <div class="informing__decor informing__decor--2">
-                <img src="images/trip-decor-8.svg" alt="trip">
-            </div>
-        </div>
-    </div>
-    <div class="trip__block trip__block--8">
-        <div class="trip__container trip__container--8 main-width">
-            <div class="trip__title trip__title--8">
-                <div>2</div>
-                <div>заявка</div>
-                <div>на</div>
-                <div>согласование</div>
-                <div>командировки</div>
-            </div> 
-            <div class="application">
-                <div class="application__note">
-                   Командируемый сотрудник заполняет и направляет заявку ответственному HR не менее <br>чем за 7-10 дней до поездки (без учета срока оформления визы, если актуально). 
-                </div>
-                <div class="application__items">
-                    <div class="application__title">
-                        От корректности и полноты заполнения заявки зависит скорость ее согласования:
-                    </div>
-                    <div class="application__item">
-                        ФИ сотрудника(ов);
-                    </div>
-                    <div class="application__item">
-                        Должность сотрудника(ов);
-                    </div>
-                    <div class="application__item">
-                        Логин учетки;
-                    </div>
-                    <div class="application__item">
-                        ФИ прямого руководителя;
-                    </div>
-                    <div class="application__item">
-                        Проект: (пример 1XBet, Melbet);
-                    </div>
-                    <div class="application__item">
-                        Ссылка на мероприятие/конференцию (если актуально);
-                    </div>
-                    <div class="application__item">
-                        Страна и город поездки;
-                    </div>
-                    <div class="application__item">
-                        Наличие визы (если актуально): [да/нет/требуется оформление];
-                    </div>
-                    <div class="application__item">
-                        Даты поездки (с … по …);
-                    </div>
-                    <div class="application__item">
-                        Необходимость переноса доступов в рабочую учетную запись (да/нет);
-                    </div>
-                    <div class="application__item">
-                        Группа АД;
-                    </div>
-                    <div class="application__item">
-                        Код офис командировки;
-                    </div>
-                    <div class="application__item">
-                        План мероприятий и встреч на время командировки (кратко описать расписание поездки, указать даты рабочих встреч и мероприятий);
-                    </div>
-                    <div class="application__item">
-                        Личные дни за свой счёт (если актуально): [указать даты до или после мероприятий/встреч или отметить, что их нет];
-                    </div>
-                   <div class="application__item">
-                        Комментарий сотрудника по поездке.
-                    </div>
-                </div>
-                <div class="application__links">
-                    <div class="application__link">
-                        <div class="application__link-title">
-                            Форма Travel-отдела 
-                            <br>для оформления командировки
-                        </div>
-                        <div class="application__link-text">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVsm5kKSTKe_9v0Mv0YHpviSLtb550RZD4mjbmI-0exQ5ZPA/viewform" target="_blank">Форма</a> на командировку для Travel-отдела.
-                        </div>
-                    </div>
-                    <div class="application__link">
-                        <div class="application__link-title">
-                            Правила оформления командировок от Travel-отдела
-                        </div>
-                        <div class="application__link-text">
-                            <a href="http://businesstrip.tribe.tilda.ws/" target="_blank">Ссылка на общую информацию</a> по деловым поездкам.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="trip__block trip__block--title">
-        <img src="images/trip-main-title-7.svg" alt="trip">
-    </div>
-     <div class="trip__block trip__block--9">
-        <div class="trip__container trip__container--9 main-width">
-            <div class="trip__title trip__title--9">
-                <div>3</div>
-                <div>чек-лист</div>
-                <div>командируемого</div>
-                <div>сотрудника</div>
-            </div> 
-            <div class="check-list">
-                <div class="check-list__item">
-                    <label>
-                        <input type="checkbox">
-                        <span>Заполнить заявку согласование командировки полно и корректно.</span>
-                    </label>   
-                </div>
-                <div class="check-list__item">
-                    <label>
-                        <input type="checkbox">
-                        <span>Передать заявку в HR на согласование.</span>
-                    </label>   
-                </div>
-                <div class="check-list__item">
-                    <label>
-                        <input type="checkbox">
-                        <span>Получить письменное подтверждение согласования (от прямого руководителя и/или C-Level руководителя), сохранить себе скриншот согласования.</span>
-                    </label>   
-                </div>
-                <div class="check-list__item">
-                    <label>
-                        <input type="checkbox">
-                        <span>Подготовить фото/скан паспорта.</span>
-                    </label>   
-                </div>
-                <div class="check-list__item">
-                    <label>
-                        <input type="checkbox">
-                        <span>Заполнить и передать форму на командировку в Travel-отдел.</span>
-                    </label>   
-                </div>
-                <div class="check-list__item">
-                    <label>
-                        <input type="checkbox">
-                        <span>Согласовать все детали поездки с Travel-менеджером.</span>
-                    </label>   
-                </div>
-                <div class="check-list__item">
-                    <label>
-                        <input type="checkbox">
-                        <span>Запросить расчет суточных расходов (сумма, валюта) через Travel-менеджера.</span>
-                    </label>   
-                </div>
-                <div class="check-list__item">
-                    <label>
-                        <input type="checkbox">
-                        <span>Получить суточные в офисе отправления.</span>
-                    </label>   
-                </div>
-                <div class="check-list__item">
-                    <label>
-                        <input type="checkbox">
-                        <span>Определить необходимость переноса учетной записи и доступов в офис работы на время командировки. Передать запрос на перенос ответственному HR.</span>
-                    </label>   
-                </div>
-        </div>
-    </div> </div>
+</div>
+    <!-- <include src="salary-en.html"></include> -->
+    <!-- <include src="trip-en.html"></include>  -->
   </main> 
-
   <footer>
     <div class="footer main-width">
        <img src="images/logo.svg" alt="Grown&Scale">
@@ -729,8 +187,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 </script>
 </footer>  
-  
   <script src="lang.js"></script>
   <script src="main.js"></script>
 </body>
 </html> 
+  
