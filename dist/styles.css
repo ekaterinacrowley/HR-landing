@@ -156,6 +156,11 @@ p {
   justify-content: center;
   height: 20px;
 }
+
+.header .lang-btn span svg {
+    width: 28px;
+}
+
 .header .arrow {
   height: 20px;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -278,6 +283,8 @@ p {
 }
 .main-block__image {
   position: relative;
+  width: 820px;
+  height: 820px;
 }
 .main-block__image-decor {
   position: absolute;
@@ -285,10 +292,12 @@ p {
 .main-block__image-decor--1 {
   left: 112px;
   top: -60px;
+  width: 74px;
 }
 .main-block__image-decor--2 {
   right: -62px;
   top: 40px;
+  width: 163px;
 }
 .main-block__image-decor--3 {
   bottom: 126px;
@@ -342,6 +351,8 @@ p {
 }
 .main-block--salary .main-block__image {
   margin-bottom: -75px;
+  width: 820px;
+  height: auto;
 }
 .main-block--salary .main-block__decor {
   position: absolute;
@@ -349,10 +360,12 @@ p {
 .main-block--salary .main-block__decor--1 {
   top: 103px;
   right: 0;
+  width: 155px;
 }
 .main-block--salary .main-block__decor--2 {
   bottom: -46px;
   right: 120px;
+  width: 137px;
 }
 .main-block--trip .main-block__container {
   padding: 60px 0 0;
@@ -366,10 +379,12 @@ p {
 .main-block--trip .main-block__content-decor--1 {
   top: 0;
   left: 110px;
+  width: 60px;
 }
 .main-block--trip .main-block__content-decor--2 {
   bottom: 80px;
   right: 160px;
+  width: 136px;
 }
 .main-block--trip .main-block__text {
   margin-top: 80px;
@@ -386,10 +401,13 @@ p {
 .main-block--trip .main-block__image {
   z-index: 1;
   margin-bottom: -100px;
+  width: 677px;
+  height: auto;
 }
 .main-block--trip .main-block__image-decor--1 {
   left: 40px;
   top: -50px;
+  width: 74px;
 }
 .main-block--trip .main-block__image-decor--3 {
   bottom: 270px;
@@ -579,6 +597,9 @@ p {
   line-height: 120%; /* 96px */
   text-transform: uppercase;
   cursor: pointer;
+}
+.salary-planned__close-link svg {
+  width: 60px;
 }
 .salary-planned__main-title {
   text-align: center;
@@ -902,9 +923,15 @@ p {
   top: -246px;
   left: 100px;
 }
+.salary-planned .conditions__decor--1 svg {
+  width: 262px;
+}
 .salary-planned .conditions__decor--2 {
   top: -90px;
   right: 70px;
+}
+.salary-planned .conditions__decor--2 svg {
+  width: 61px;
 }
 .salary-planned .responsible {
   display: flex;
@@ -950,16 +977,21 @@ p {
   border: 4px solid var(--White, #FDFDF5);
   background: rgba(159, 186, 241, 0.35);
 }
+.salary-planned .responsible__item--warning svg {
+  width: 25px;
+}
 .salary-planned .responsible__decor {
   position: absolute;
 }
 .salary-planned .responsible__decor--1 {
   top: -235px;
   left: 200px;
+  width: 120px;
 }
 .salary-planned .responsible__decor--2 {
   top: -25px;
   right: 170px;
+  width: 158px;
 }
 .salary-planned .matrix {
   display: flex;
@@ -982,6 +1014,7 @@ p {
   position: absolute;
   top: 50px;
   right: -40px;
+  width: 163px;
 }
 .salary-planned .matrix__note {
   display: flex;
@@ -1059,16 +1092,19 @@ p {
   position: absolute;
   top: 50px;
   right: -40px;
+  width: 163px;
 }
 .salary-planned .example__decor--1 {
   top: 0px;
   right: 310px;
+  width: 192px;
 }
 .salary-planned .example__decor--2 {
   top: auto;
   bottom: -268px;
   right: auto;
   left: 30%;
+  width: 370px;
 }
 .salary-planned .rules {
   display: flex;
@@ -1133,32 +1169,39 @@ p {
 .salary-planned .rules__decor--1 {
   right: 20px;
   top: -30px;
+  width: 109px;
 }
 .salary-planned .rules__decor--2 {
   left: 150px;
   top: 150px;
+  width: 71px;
 }
 .salary-planned .rules__decor--3 {
   left: -40px;
   top: 380px;
+  width: 115px;
 }
 .salary-planned .rules__decor--4 {
   right: 0;
   top: 1000px;
+  width: 71px;
 }
 .salary-planned .rules__decor--5 {
   right: 20px;
   bottom: -570px;
+  width: 73px;
 }
 .salary-planned .rules__decor--6 {
   left: -40px;
   bottom: -730px;
+  width: 104px;
 }
 .salary-planned .rules__image {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: -320px;
+  width: 1393px;
 }
 .salary-planned .rules__image div {
   display: inline-flex;
@@ -1242,6 +1285,7 @@ p {
   position: absolute;
   top: 50px;
   right: -40px;
+  width: 163px;
 }
 .salary-planned .time__items {
   display: flex;
@@ -1292,6 +1336,7 @@ p {
 }
 .salary-planned .refuse__image {
   position: relative;
+  width: 677px;
 }
 .salary-planned .refuse__image div {
   display: inline-flex;
@@ -1451,22 +1496,27 @@ p {
 .salary-planned .steps__decor--1 {
   right: 15px;
   top: 15px;
+  width: 353px;
 }
 .salary-planned .steps__decor--2 {
   left: -50px;
   top: 200px;
+  width: 152px;
 }
 .salary-planned .steps__decor--3 {
   left: -80px;
   top: 745px;
+  width: 428px;
 }
 .salary-planned .steps__decor--4 {
   left: 510px;
   bottom: -10px;
+  width: 152px;
 }
 .salary-planned .steps__decor--5 {
   right: -10px;
   bottom: -20px;
+  width: 428px;
 }
 .salary-planned .requirements {
   display: flex;
@@ -1585,6 +1635,9 @@ p {
   text-transform: uppercase;
   cursor: pointer;
 }
+.salary-unplanned__close-link svg {
+  width: 60px;
+}
 .salary-unplanned__title {
   display: flex;
   flex-wrap: wrap;
@@ -1621,6 +1674,7 @@ p {
 .salary-unplanned .justification__image {
   position: relative;
   margin-bottom: -60px;
+  width: 963px;
 }
 .salary-unplanned .justification__image div {
   display: inline-flex;
@@ -1711,6 +1765,7 @@ p {
 }
 .salary-unplanned .responsible__image {
   position: relative;
+  width: 820px;
 }
 .salary-unplanned .responsible__image div {
   display: inline-flex;
@@ -1875,6 +1930,7 @@ p {
   position: absolute;
   right: 100px;
   top: 260px;
+  width: 150px;
 }
 
 .trip__block {
@@ -2138,6 +2194,9 @@ p {
   color: var(--White, #FDFDF5);
   font-weight: 500;
 }
+.trip .main-rules__warning svg {
+  width: 25px;
+}
 .trip .main-rules__images {
   position: relative;
 }
@@ -2170,14 +2229,17 @@ p {
 .trip .main-rules__decor--1 {
   top: 100px;
   left: 30px;
+  width: 106px;
 }
 .trip .main-rules__decor--2 {
   top: 80px;
   right: 80px;
+  width: 81px;
 }
 .trip .main-rules__decor--3 {
   bottom: 60px;
   right: 280px;
+  width: 106px;
 }
 .trip .types {
   display: flex;
@@ -2228,6 +2290,7 @@ p {
 .trip .types__image {
   position: relative;
   padding-top: 30px;
+  width: 819px;
 }
 .trip .types__decor {
   position: absolute;
@@ -2236,14 +2299,17 @@ p {
   left: 10px;
   top: 0;
   transform: rotate(15deg);
+  width: 74px;
 }
 .trip .types__decor--2 {
   right: -37px;
   bottom: 100px;
+  width: 74px;
 }
 .trip .types__decor--3 {
   top: 50px;
   left: 100px;
+  width: 86px;
 }
 .trip .rules {
   display: flex;
@@ -2336,6 +2402,7 @@ p {
   position: absolute;
   top: 230px;
   left: 150px;
+  width: 64px;
 }
 .trip .steps {
   width: 1107px;
@@ -2423,11 +2490,13 @@ p {
 .trip .steps__decor--1 {
   right: -10px;
   top: -265px;
+  width: 188px;
 }
 .trip .steps__decor--2 {
   right: 0;
   top: -40px;
   z-index: 1;
+  width: 145px;
 }
 .trip .travel-department {
   display: flex;
@@ -2479,6 +2548,7 @@ p {
   position: relative;
   margin-bottom: -100px;
   z-index: 1;
+  width: 821px;
 }
 .trip .travel-department__image div {
   position: absolute;
@@ -2504,11 +2574,13 @@ p {
 .trip .travel-department__decor--1 {
   bottom: 250px;
   left: 120px;
+  width: 86px;
 }
 .trip .travel-department__decor--2 {
   bottom: 130px;
   right: 120px;
   transform: rotate(-25deg);
+  width: 86px;
 }
 .trip .expenses {
   display: flex;
@@ -2564,6 +2636,7 @@ p {
 .trip .informing__decor--1 {
   top: 120px;
   left: -40px;
+  width: 188px;
 }
 .trip .informing__decor--2 {
   width: 100px;
@@ -2707,6 +2780,9 @@ footer .footer__content {
   position: absolute;
   bottom: 0;
   right: 12%;
+}
+footer .footer__content img {
+  width: 200px;
 }
 footer .footer__text {
   display: inline-flex;

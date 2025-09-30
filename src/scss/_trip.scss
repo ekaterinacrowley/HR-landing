@@ -324,6 +324,10 @@
             background: rgba(159, 186, 241, 0.35);
             color: var(--White, #FDFDF5);
             font-weight: 500;
+
+            svg {
+                width: 25px;
+            }
         }
 
         &__images {
@@ -361,15 +365,18 @@
             &--1 {
                 top: 100px;
                 left: 30px;
+                width: 106px;
             }
              &--2 {
                 top: 80px;
                 right: 80px;
+                width: 81px;
             }
 
               &--3 {
                 bottom: 60px;
                 right: 280px;
+                width: 106px;
             }
         }
     }
@@ -427,6 +434,7 @@
         &__image {
             position: relative;
             padding-top: 30px;
+            width: 819px;
         }
 
         &__decor {
@@ -436,15 +444,18 @@
                 left: 10px;
                 top: 0;
                 transform: rotate(15deg);
+                width: 74px;
             }
             &--2 {
                 right: -37px;
                 bottom: 100px;
+                width: 74px;
             }
 
             &--3 {
                 top: 50px;
                 left: 100px;
+                width: 86px;
             }
         }
     }
@@ -556,6 +567,7 @@
             position: absolute;
             top: 230px;
             left: 150px;
+            width: 64px;
         }
     }
 
@@ -656,12 +668,14 @@
             &--1 {
                 right: -10px;
                 top: -265px;
+                width: 188px;
             }
 
             &--2 {
                 right: 0;
                 top: -40px; 
                 z-index: 1;
+                width: 145px;
             }
         }
     }
@@ -719,6 +733,7 @@
             position: relative;
             margin-bottom: -100px;
             z-index: 1;
+            width: 821px;
 
             div {
                 position: absolute;
@@ -746,11 +761,13 @@
             &--1 {
                 bottom: 250px;
                 left: 120px;
+                width: 86px;
             }
             &--2 {
                 bottom: 130px;
                 right: 120px;
                 transform: rotate(-25deg);
+                width: 86px;
             }
         }
     }
@@ -816,6 +833,7 @@
             &--1 {
                 top: 120px;
                 left: -40px;
+                width: 188px;
             }
             &--2 {
                 width: 100px;
