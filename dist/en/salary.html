@@ -12,27 +12,31 @@
 	<div class="header main-width">
 		<div class="header__controls">
 			<a class="header__back-link" href="index.html">
-			 <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-					<rect x="2" y="2" width="52" height="52" rx="10" fill="white" fill-opacity="0.3"></rect>
-					<rect x="2" y="2" width="52" height="52" rx="10" stroke="#FDFDF5" stroke-width="4"></rect>
-					<path d="M25 22L25 26L29 26L29 22L25 22ZM33 22L33 18L29 18L29 22L33 22ZM29 30L25 30L25 34L29 34L29 30ZM21 30L25 30L25 26L21 26L21 30ZM29 34L29 38L33 38L33 34L29 34Z" fill="#FDFDF5"></path>
-				</svg>
 			</a>
 		</div>
 		<div class="logo"><img src="../images/logo.svg"></div>
 		<div class="header__controls header__controls--lang"><div class="custom-lang-dropdown" id="lang-select-wrapper">
   <button type="button" class="lang-btn" id="lang-select-btn">
     <span class="lang-flag flag-en" id="lang-flag-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20">
-          <rect width="28" height="20" fill="#012169"></rect>
-          <polygon points="0,0 4,0 28,16 28,20 24,20 0,4" fill="#ffffff"></polygon>
-          <polygon points="28,0 28,4 4,20 0,20 0,16 24,0" fill="#ffffff"></polygon>
-          <polygon points="0,0 2,0 28,18 28,20 26,20 0,2" fill="#C8102E"></polygon>
-          <polygon points="28,0 28,2 2,20 0,20 0,18 26,0" fill="#C8102E"></polygon>
-          <rect x="12" width="4" height="20" fill="#ffffff"></rect>
-          <rect y="8" width="28" height="4" fill="#ffffff"></rect>
-          <rect x="13" width="2" height="20" fill="#C8102E"></rect>
-          <rect y="9" width="28" height="2" fill="#C8102E"></rect>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+            <g clip-path="url(#clip0_394_47886)">
+                <path d="M0 0V20H28V0H0Z" fill="#7280E5"/>
+                <path d="M0 0L28 20L0 0ZM28 0L0 20L28 0Z" fill="#1D1D1D"/>
+                <path d="M0 0L28 20M28 0L0 20" stroke="#FDFDF5" stroke-width="3.2"/>
+                <mask id="mask0_394_47886" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="20">
+                <path d="M14 10H28V20L14 10ZM14 10V20H0L14 10ZM14 10H0V0L14 10ZM14 10V0H28L14 10Z" fill="white"/>
+                </mask>
+                <g mask="url(#mask0_394_47886)">
+                <path d="M0 0L28 20L0 0ZM28 0L0 20L28 0Z" fill="#1D1D1D"/>
+                <path d="M0 0L28 20M28 0L0 20" stroke="#D54434" stroke-width="2.13333"/>
+                </g>
+                <path d="M-0.560059 7.33301H11.7599V-0.666992H16.2399V7.33301H28.5599V12.6663H16.2399V20.6663H11.7599V12.6663H-0.560059V7.33301Z" fill="#D54434" stroke="#FDFDF5" stroke-width="1.06667"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_394_47886">
+                <rect width="28" height="20" fill="white"/>
+                </clipPath>
+            </defs>
         </svg>
     </span>
     <span class="lang-arrow">
@@ -43,7 +47,7 @@
   </button>
   <ul class="lang-list" id="lang-list" hidden="">
     <li data-value="ru">
-      <a class="lang-flag flag-ru" href="/">
+      <a class="lang-flag flag-ru" href="/salary.html">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
         <rect width="28" height="7" fill="#FDFDF5"></rect>
         <rect y="7" width="28" height="6" fill="#7280E5"></rect>
@@ -51,21 +55,7 @@
       </svg>
     </a>
     </li>
-    <li data-value="en">
-      <a class="lang-flag flag-en" href="/en/">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20">
-          <rect width="28" height="20" fill="#012169"></rect>
-          <polygon points="0,0 4,0 28,16 28,20 24,20 0,4" fill="#ffffff"></polygon>
-          <polygon points="28,0 28,4 4,20 0,20 0,16 24,0" fill="#ffffff"></polygon>
-          <polygon points="0,0 2,0 28,18 28,20 26,20 0,2" fill="#C8102E"></polygon>
-          <polygon points="28,0 28,2 2,20 0,20 0,18 26,0" fill="#C8102E"></polygon>
-          <rect x="12" width="4" height="20" fill="#ffffff"></rect>
-          <rect y="8" width="28" height="4" fill="#ffffff"></rect>
-          <rect x="13" width="2" height="20" fill="#C8102E"></rect>
-          <rect y="9" width="28" height="2" fill="#C8102E"></rect>
-        </svg>
-      </a>
-  </li></ul>
+    </ul>
 </div>
 <script>
 
@@ -80,8 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrow = btn.querySelector('.lang-arrow');
     if (!list.hidden) {
       arrow.classList.add('open');
+      btn.classList.add('open');
     } else {
       arrow.classList.remove('open');
+      btn.classList.remove('open');
     }
   });
 
@@ -90,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
       list.hidden = true;
       const arrow = btn.querySelector('.lang-arrow');
       arrow.classList.remove('open');
+      btn.classList.remove('open');
     }
   });
 });

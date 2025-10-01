@@ -809,10 +809,9 @@
                 gap: 10px;
                 border-radius: 20px;
                 background: var(--Main-Yellow, #EAF3B2);
-                box-shadow: 0 17px 0 0 #3F4679;
-                
+                box-shadow: 0 17px 0 0 #3F4679;               
                 font-weight: 500;
-                
+            
             }
         }
 
@@ -878,11 +877,11 @@
         }
 
         &--2 {
-            .rooles__note {
+            .rules__note {
                 background: var(--Yellow-bright, #F4CE24);
             }
 
-            .rooles__item-text {
+            .rules__item-text {
                 background: var(--Main-Blue, #7280E5);
                 color: var(--White, #FDFDF5);
                 position: relative;
@@ -899,6 +898,10 @@
                     text-decoration-thickness: auto;
                     text-underline-offset: auto;
                     text-underline-position: from-font;
+
+                     &:hover {
+                         color: var(--Black, #1D1D1D);    
+                    }
                 }
 
                 b {
@@ -909,7 +912,7 @@
                 
             }
 
-            .rooles__item {
+            .rules__item {
                 position: relative;
 
                 &:after {
@@ -1178,6 +1181,7 @@
             align-self: flex-start;
             margin-left: -50px;
             margin-top: -30px;
+            z-index: 1;
 
             div {
                 display: inline-flex;
@@ -1221,6 +1225,7 @@
                left: -80px;
                top: 745px;
                width: 428px;
+                z-index: 0;
             }
             &--4 {
                 left: 510px;

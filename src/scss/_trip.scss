@@ -486,7 +486,7 @@
                         transform: translate(-13px);
                         width: 109px;
                         height: 296px;
-                        background: url(../images/line-13.webp) no-repeat center;
+                        background: url(../images/line-13.webp) no-repeat left center;
                         background-size: contain;
                         z-index: 1;
                     }
@@ -498,7 +498,7 @@
                         transform: translate(-13px);
                         width: 109px;
                         height: 506px;
-                        background: url(../images/line-14.webp) no-repeat center;
+                        background: url(../images/line-14.webp) no-repeat left center;
                         background-size: contain;
                         z-index: 1;
                     }
@@ -511,7 +511,7 @@
                         transform: translate(-13px);
                         width: 109px;
                         height: 488px;
-                        background: url(../images/line-15.webp) no-repeat center;
+                        background: url(../images/line-15.webp) no-repeat left center;
                         background-size: contain;
                         z-index: 1;
                     }
@@ -523,7 +523,7 @@
                         transform: translate(-13px);
                         width: 109px;
                         height: 296px;
-                        background: url(../images/line-16.webp) no-repeat center;
+                        background: url(../images/line-16.webp) no-repeat left center;
                         background-size: contain;
                         z-index: 1;
                     }
@@ -631,7 +631,7 @@
                     transform: translate(-13px);
                     width: 109px;
                     height: 324px;
-                    background: url(../images/line-17.webp) no-repeat center;
+                    background: url(../images/line-17.webp) no-repeat left center;
                     background-size: contain;
                     z-index: 1;
                 }
@@ -643,7 +643,7 @@
                     transform: translate(-13px);
                     width: 109px;
                     height: 272px;
-                    background: url(../images/line-18.webp) no-repeat center;
+                    background: url(../images/line-18.webp) no-repeat left center;
                     background-size: contain;
                     z-index: 1;
                 }
@@ -655,7 +655,7 @@
                     transform: translate(-13px);
                     width: 109px;
                     height: 323px;
-                    background: url(../images/line-19.webp) no-repeat center;
+                    background: url(../images/line-19.webp) no-repeat left center;
                     background-size: contain;
                     z-index: 1;
                 }
@@ -799,7 +799,8 @@
             right: 0;     
             bottom: 40px;
             background:url("images/trip-main-title-5.svg") top center repeat-y;
-            z-index: 0;   
+            z-index: 0;  
+            background-size: contain;
         }     
     }
 
@@ -884,7 +885,7 @@
                     display: inline-block;
                     width: 24px;
                     height: 24px;
-                    background: url(images/arrow.svg) no-repeat center;
+                    background: url(images/arrow.svg) no-repeat left center;
                     background-size: contain;
             }
         }
@@ -917,6 +918,11 @@
                     color: var(--Yellow-bright, #F4CE24);
                     font-style: italic;
                     border-bottom: 1px solid var(--Yellow-bright, #F4CE24);
+
+                    &:hover {
+                        color: var(--Pink, #F3B2D9);
+                         border-bottom: 1px solid var(--Pink, #F3B2D9);
+                    }
                 }
             }
        
@@ -963,7 +969,7 @@
                 &:checked {
   
                     &:after {
-                        content: '✓';
+                        content: '';
                         font-family: "Compliance Sans";
                         font-size: 80px;
                         line-height: 1;
@@ -973,6 +979,9 @@
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
+                        width: 32px;
+                        height: 23px;
+                        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='23' viewBox='0 0 32 23' fill='none'><path fill-rule='evenodd' clip-rule='evenodd' d='M31.1145 1.0946C31.5597 1.53998 31.8098 2.14396 31.8098 2.77372C31.8098 3.40349 31.5597 4.00747 31.1145 4.45285L13.313 22.2543C13.0778 22.4896 12.7985 22.6762 12.4911 22.8036C12.1837 22.9309 11.8542 22.9965 11.5215 22.9965C11.1888 22.9965 10.8593 22.9309 10.5519 22.8036C10.2445 22.6762 9.96521 22.4896 9.72996 22.2543L0.88546 13.4113C0.658623 13.1923 0.477691 12.9302 0.353219 12.6404C0.228748 12.3507 0.16323 12.039 0.16049 11.7237C0.15775 11.4083 0.217842 11.0956 0.337259 10.8037C0.456676 10.5118 0.633027 10.2467 0.856022 10.0237C1.07902 9.80066 1.34419 9.62431 1.63607 9.5049C1.92795 9.38548 2.24069 9.32539 2.55604 9.32813C2.87139 9.33087 3.18304 9.39638 3.4728 9.52086C3.76256 9.64533 4.02462 9.82626 4.24371 10.0531L11.5207 17.3301L27.7546 1.0946C27.9752 0.873896 28.2371 0.698819 28.5253 0.579369C28.8136 0.459919 29.1225 0.398438 29.4345 0.398438C29.7466 0.398438 30.0555 0.459919 30.3438 0.579369C30.632 0.698819 30.8939 0.873896 31.1145 1.0946Z' fill='%23EAF3B2'/></svg>") center/contain no-repeat;
                     }
                 }
             }

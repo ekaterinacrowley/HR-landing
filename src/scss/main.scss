@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url("fonts/Gilroy-Regulat.ttf");
+  src: url("fonts/Gilroy-Regular.ttf");
   
 }
 
@@ -127,6 +127,10 @@ p {
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
+.dayoff {
+  background: var(--White, #FDFDF5);
+}
+
 @import 'header';
 
 @import 'main-block'; 
@@ -135,6 +139,7 @@ p {
 @import 'salary-planned';
 @import 'salary-unplanned';
 @import 'trip';
+@import 'dayoff';
 @import 'footer';  
 
 body.en {

@@ -14,12 +14,25 @@
     }
   }
 
+  &__back-link {
+    display: flex;
+    width: 52px;
+    height: 52px;
+    background: url(images/back.svg) no-repeat center;
+    background-size: contain;
+
+     &:hover {
+      background: url(images/back-hover.svg) no-repeat center;
+      background-size: contain;
+    }
+  }
+
   .custom-lang-dropdown {
-  position: relative;
-  display: inline-block;
-  min-width: 120px;
-  font-family: inherit;
-}
+    position: relative;
+    display: inline-block;
+    min-width: 120px;
+    font-family: inherit;
+  }
 
 .lang-btn {
   display: flex;
@@ -29,6 +42,13 @@
   border-radius: 10px;
   border: 4px solid #FDFDF5;
   background: #9CA6ED;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover, &.open {
+    background: var(--Yellow-bright, #F4CE24);
+    border: 4px solid var(--Main-Yellow, #EAF3B2);
+  }
 }
 .lang-btn span {
   display: flex;
@@ -48,8 +68,8 @@
   position: absolute;
   left: 0;
   top: 44px;
-  background: #9CA6ED;;
-  border: 4px solid #FDFDF5;
+  background: var(--Yellow-bright, #F4CE24);
+  border: 4px solid var(--Main-Yellow, #EAF3B2);
   border-top: 0;
   border-radius: 0 0 10px 10px;
   margin: 0;
@@ -65,11 +85,20 @@
   gap: 8px;
   padding: 12px 16px;
   cursor: pointer;
-  transition: background 0.15s;
+ 
+
+  &:hover svg {
+    border: 1px solid var(--Black, #1D1D1D);
+    border-radius: 4px;
+     transition: all 0.3s ease;
+  }
 }
 }
 
-.trip .header .lang-btn, 
-.trip .header .lang-list {
-  background: var(--Pink, #F3B2D9);
+.trip .header .lang-btn {
+   background: var(--Pink, #F3B2D9);
+    
+   &:hover, &.open {
+    background: var(--Yellow-bright, #F4CE24);
+  }
 }
