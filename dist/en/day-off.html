@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G&S Team</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles-vw.css">
+</head> 
+<body class="en">
+  <!-- <include src="header.html"></include> -->
+  <header>
+	<div class="header main-width">
+		<div class="header__controls">
+			<a class="header__back-link" href="index.html">
+			 <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+					<rect x="2" y="2" width="52" height="52" rx="10" fill="white" fill-opacity="0.3"></rect>
+					<rect x="2" y="2" width="52" height="52" rx="10" stroke="#FDFDF5" stroke-width="4"></rect>
+					<path d="M25 22L25 26L29 26L29 22L25 22ZM33 22L33 18L29 18L29 22L33 22ZM29 30L25 30L25 34L29 34L29 30ZM21 30L25 30L25 26L21 26L21 30ZM29 34L29 38L33 38L33 34L29 34Z" fill="#FDFDF5"></path>
+				</svg>
+			</a>
+		</div>
+		<div class="logo"><img src="../images/logo.svg"></div>
+		<div class="header__controls header__controls--lang"><div class="custom-lang-dropdown" id="lang-select-wrapper">
+  <button type="button" class="lang-btn" id="lang-select-btn">
+    <span class="lang-flag flag-en" id="lang-flag-btn">
+       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+            <g clip-path="url(#clip0_394_47886)">
+                <path d="M0 0V20H28V0H0Z" fill="#7280E5"></path>
+                <path d="M0 0L28 20L0 0ZM28 0L0 20L28 0Z" fill="#1D1D1D"></path>
+                <path d="M0 0L28 20M28 0L0 20" stroke="#FDFDF5" stroke-width="3.2"></path>
+                <mask id="mask0_394_47886" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="20">
+                <path d="M14 10H28V20L14 10ZM14 10V20H0L14 10ZM14 10H0V0L14 10ZM14 10V0H28L14 10Z" fill="white"></path>
+                </mask>
+                <g mask="url(#mask0_394_47886)">
+                <path d="M0 0L28 20L0 0ZM28 0L0 20L28 0Z" fill="#1D1D1D"></path>
+                <path d="M0 0L28 20M28 0L0 20" stroke="#D54434" stroke-width="2.13333"></path>
+                </g>
+                <path d="M-0.560059 7.33301H11.7599V-0.666992H16.2399V7.33301H28.5599V12.6663H16.2399V20.6663H11.7599V12.6663H-0.560059V7.33301Z" fill="#D54434" stroke="#FDFDF5" stroke-width="1.06667"></path>
+            </g>
+            <defs>
+                <clipPath id="clip0_394_47886">
+                <rect width="28" height="20" fill="white"></rect>
+                </clipPath>
+            </defs>
+        </svg>
+    </span>
+    <span class="lang-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+        <path d="M4 8L8 8L8 4L4 4L4 8ZM4 -6.99382e-07L0 -8.74228e-07L-1.74846e-07 4L4 4L4 -6.99382e-07ZM12 4L12 8L16 8L16 4L12 4ZM12 12L12 8L8 8L8 12L12 12ZM16 4L20 4L20 0L16 -1.74846e-07L16 4Z" fill="#FDFDF5"></path>
+      </svg>
+    </span>
+  </button>
+  <ul class="lang-list" id="lang-list" hidden="">
+    <li data-value="en">
+      <a class="lang-flag flag-ru" href="/day-off.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+        <rect width="28" height="7" fill="#FDFDF5"></rect>
+        <rect y="7" width="28" height="6" fill="#7280E5"></rect>
+        <rect y="13" width="28" height="7" fill="#D54434"></rect>
+      </svg>
+         
+      </a>
+    </li>
+  </ul>
+</div>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('lang-select-btn');
+  const list = document.getElementById('lang-list');
+  const wrapper = document.getElementById('lang-select-wrapper');
+
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    list.hidden = !list.hidden;
+    const arrow = btn.querySelector('.lang-arrow');
+    if (!list.hidden) {
+      arrow.classList.add('open');
+      btn.classList.add('open');
+    } else {
+      arrow.classList.remove('open');
+      btn.classList.remove('open');
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!wrapper.contains(e.target)) {
+      list.hidden = true;
+      const arrow = btn.querySelector('.lang-arrow');
+      arrow.classList.remove('open');
+      btn.classList.remove('open');
+    }
+  });
+});
+</script></div>
+	</div>
+</header>
+<main>
+     <!-- <include src="index.html"></include> -->
+      <!-- <include src="index-en.html"></include>  -->
+      <!-- <include src="salary.html"></include> -->
+      <!-- <include src="salary-en.html"></include> -->
+      <!-- <include src="trip.html"></include>  -->
+      <!-- <include src="trip-en.html"></include>  -->
+      <!-- <include src="dayoff.html"></include> -->
+      <div class="dayoff">
+    <div class="main-block main-block--dayoff main-width">
+  <div class="main-block__container">
+    <div class="main-block__content">
+        <div class="main-block__title">
+            <div class="main-block__title-text main-block__title-text--1">
+                day
+            </div>
+            <div class="main-block__title-text main-block__title-text--2">
+                off
+           </div>
+        </div>
+        <div class="main-block__text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="74" viewBox="0 0 44 74" fill="none">
+                <path d="M29.3333 59L29.3333 44.3333L14.6667 44.3333L14.6667 59L29.3333 59ZM0 59L0 73.6666H14.6667L14.6667 59H0ZM14.6667 29.6666H29.3333V15L14.6667 15L14.6667 29.6666ZM44 29.6666L29.3333 29.6666L29.3333 44.3333H44V29.6666ZM14.6667 15L14.6667 0.333313L0 0.333313L0 15L14.6667 15Z" fill="#1D1D1D"></path>
+            </svg>
+            <p>What Day Off is, the main rules of use, accrual process, and examples of transferring days after relocation.</p>
+        </div>
+         <div class="main-block__subtitle">
+            <div class="main-block__subtitle-text main-block__subtitle-text--1">where there's on</div>
+            <div class="main-block__subtitle-text main-block__subtitle-text--2">there's also off</div>
+        </div>
+        <div class="main-block__decor main-block__decor--1">
+            <img src="../images/dayoff-decor-1.svg" alt="decor">
+        </div>
+         <div class="main-block__decor main-block__decor--2">
+            <img src="../images/dayoff-decor-2.svg" alt="decor">
+        </div>
+         <div class="main-block__decor main-block__decor--3">
+            <img src="../images/dayoff-decor-3.svg" alt="decor">
+        </div>
+    </div>
+    <div class="main-block__image">
+        <img src="../images/main-block-dayoff-img.webp" alt="Grown&Scale"> 
+        <div class="main-block__image-decor main-block__image-decor--2">
+            <img src="../images/arrows-3.webp" alt="decor">
+        </div>
+        <div class="main-block__image-decor main-block__image-decor--3">time to focus on what really matters.</div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="dayoff__block dayoff__block--1">
+        <div class="dayoff__main-title">
+            <img src="../images/dayoff-main-title.svg" alt="dayoff">
+        </div>
+        <div class="dayoff__container dayoff__container--1 main-width">
+            <div class="dayoff__title dayoff__title--1">
+                <div>1</div>
+                <div>Main</div>
+                <div>Rules</div>
+            </div> 
+            <div class="rules__text">
+                <span>Day off – </span>these are additional days off <br>with full salary retention, which an employee <br>takes in agreement with their manager.
+            </div>
+            <div class="rules">
+                <div class="rules__items">
+                    <div class="rules__item">
+                        <div class="rules__item-number">1</div>
+                        <div class="rules__item-text"><div>From the first day of the work year, the employee has <b>4 day off</b> available.</div></div>
+                    </div>
+                    <div class="rules__item">
+                        <div class="rules__item-number">2</div>
+                        <div class="rules__item-text">
+                            <div>The work year <b>does not coincide with the calendar year</b>. It starts on the employee’s first working day 
+and ends 12 months later.</div>
+                            <div>For example, if the employee started on December 2, 2023, <br>their first work year <br>ends on December 1, 2024.</div>
+                        </div>
+                    </div>
+                    <div class="rules__item">
+                        <div class="rules__item-number">3</div>
+                        <div class="rules__item-text"><div>Unused day off <b>cannot be carried over</b> <br>to the next work year.</div></div>
+                    </div>
+                    <div class="rules__item">
+                        <div class="rules__item-number">4</div>
+                        <div class="rules__item-text">
+                            <div>The balance of day off for the current work year can be viewed 
+                            in the “Absences” tab of the “Personal Data” section
+                            in <br><a href="https://wplan.office.lan/personal-data" target="_blank">Wplan</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rules__image">
+                    <img src="../images/rules-img-3.webp" alt="icon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dayoff__block dayoff__block--2">
+        <div class="dayoff__container dayoff__container--2 main-width">
+            <div class="dayoff__title dayoff__title--2">
+                <div>2</div>
+                <div>Day off</div>
+                <div>Accrual</div>
+                <div>Procedure</div>
+            </div> 
+            <div class="working-off">
+                <div class="working-off__item">
+                    <div>One Day off is considered accrued if the employee has worked at least 1 day 
+within a quarter (3 months).</div>
+                    <div>Accordingly, all 4 Day off are accrued if the employee has worked the full work year.</div>
+                    <div>However, an employee may take Day off in advance. For example, if they worked 1 quarter but took 2 Day off, only the first one is considered accrued, while the second was taken in advance.</div>
+                </div>
+                <div class="working-off__item">
+                    <div>If an employee transfers to a new office with a new employment date, any unused Day off from the old office expire.</div>
+                    <div>In the new office, from the first working day, the employee is granted 4 Day off, but any days already taken in advance 
+before the transfer will be deducted from this amount.</div>
+                </div>
+                <div class="working-off__image">
+                     <img src="../images/dayoff-main-title-2.svg" alt="dayoff">
+                </div>
+            </div>
+            <div class="working-off__example">
+                <div class="working-off__example-title">Example</div>
+                <div>The employee’s work year started on <b>01.02.2024.</b></div>
+                <div>They were transferred to a new office with a new employment date. The first working day in the new office was <b>06.05.2024.</b></div>
+                <div>Before that date, the employee used 4 Day off but worked only 1 quarter and 5 days. This means they earned 2 Day off, while the other 2 were taken in advance.</div>
+                <div>Therefore, after the transfer, they will receive: 4 <b>(number of Day off per work year) – 2 (Day off taken in advance)</b> = 2 Day off.</div>
+                <div>This is the number of Day off available to the employee for the work year from <b>06.05.2024 to 05.05.2025.</b></div>
+                <div>At the start of the next work year, the employee will again receive <b>4 Day off.</b></div>
+            </div>
+            <div class="working-off__decor working-off__decor--1">
+                <img src="../images/arrows.webp" alt="working-off">
+            </div>
+            <div class="working-off__decor working-off__decor--2">
+                <img src="../images/dayoff-decor-4.svg" alt="working-off">
+            </div>
+        </div>
+    </div> 
+
+    <div class="dayoff__block dayoff__block--3">
+        <div class="dayoff__main-title">
+           <img src="../images/trip-main-title-2.svg" alt="trip">
+        </div>
+        <div class="dayoff__container dayoff__container--3 main-width">
+            <div class="dayoff__title dayoff__title--3">
+                <div>3</div>
+                <div>Examples</div>
+                <div>of Day off</div>
+                <div>Accrual</div>
+                <div>after</div>
+                <div>Relocation</div>
+            </div>
+             <div class="relocation">
+                <div class="relocation__item">
+                    Day off were introduced in WPlan on <b>01.01.2024.</b> This date is used as a starting point for Day off accrual for employees whose work year began before Day off were introduced.
+                </div>
+                <div class="relocation__item">
+                    If an employee’s work year started after 01.01.2024, Day off are accrued <br><b>from the start date of their work year.</b>
+                </div>
+            </div>
+            <div class="relocation__image">
+                <img src="../images/relocation-img.webp" alt="icon">
+                <div class="relocation__decor">
+                    <img src="../images/cursor.webp" alt="decor">
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+   
+  <footer>
+	<div class="footer main-width">
+	   <img src="../images/logo.svg" alt="Grown&Scale">
+	   <div class="footer__content">
+			<div class="footer__text">colleague</div>
+			<div class="footer__image">
+                <img src="images/footer-img.gif" alt="Grown&Scale" />
+            </div>
+	   </div>
+	</div>
+	   <script>
+        const blocks = document.querySelectorAll(".salary");
+        const links = document.querySelectorAll(".salary-links__item");
+
+        links.forEach(link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                const target = link.dataset.link;
+
+                blocks.forEach(block => {
+                if (block.dataset.block === target) {
+                    // показать выбранный
+                    block.style.maxHeight = block.scrollHeight + "px";
+                    block.style.opacity = "1";
+                } else {
+                    // скрыть остальные
+                    block.style.maxHeight = "0";
+                    block.style.opacity = "0";
+                }
+                });
+            });
+        });
+
+        blocks.forEach(block => {
+            const closeBtn = block.querySelector(".close-link");
+            if (closeBtn) {
+                closeBtn.addEventListener("click", e => {
+                e.preventDefault();
+                block.style.maxHeight = "0";
+                block.style.opacity = "0";
+                });
+            }
+        });
+</script>
+</footer>  
+  <script src="lang.js"></script>
+  <script src="main.js"></script>
+</body> 
+</html> 
+  

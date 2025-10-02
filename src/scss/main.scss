@@ -43,7 +43,7 @@
 
 html {
   height: 100%;
-  width: 1920px;
+  width: 100%;
   margin: 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
@@ -60,6 +60,7 @@ body {
   margin: 0;
   background: var(--Main-Blue, #7280E5);
   color: var(--Black, #1D1D1D);
+  padding-top: 116px;
 
   &.trip {
     background: var(--Pink, #F3B2D9);
@@ -143,6 +144,7 @@ p {
 @import 'footer';  
 
 body.en {
+
   .main-block--salary .main-block__title {
     width: 975px;
     margin-left: -345px;
@@ -182,5 +184,17 @@ body.en {
   .trip__title--8 div:nth-child(4) {
     margin-left: auto;
     margin-right: 165px;
+  }
+
+  .main-block--dayoff .main-block__subtitle {
+      width: 300px;
+  }
+
+  .dayoff__title--3 {
+    width: 1420px;
+  }
+
+  .dayoff .working-off__item:first-child {
+    padding-bottom: 110px;
   }
 }

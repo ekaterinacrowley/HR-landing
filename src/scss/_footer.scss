@@ -20,8 +20,22 @@ footer {
             bottom:0;
             right: 12%;
 
+    
+        }
+
+        &__image {
+            position: relative;
+            overflow: hidden;
+            width: 260px;
+            height: 155px;
+
             img {
-                width: 200px;
+                position: absolute;
+                top: -30px;
+                left: -30px;
+                max-width: 250px;
+                max-height: 250px;
+                width: 250px;
             }
         }
 

@@ -45,11 +45,14 @@
 
         &--1 {
             background: var(--Main-Yellow, #EAF3B2);
+            animation: tiltLeft 5s ease-in-out infinite;
         }
-
+ 
         &--2 {
             background: var(--Light-Blue, #9FBAF1);
             align-self: flex-end;
+            animation: tiltRight 5s ease-in-out infinite;
+            animation-delay: 2.5s;
         }
     }
 
@@ -86,6 +89,10 @@
         align-items: center;
         gap: 60px;
         margin-top: auto;
+        
+        svg {
+            animation: arrowMooving 2s ease-in-out infinite;
+        }
 
         p {
             color: var(--Main-Yellow, #EAF3B2);
@@ -165,7 +172,6 @@
 
     &--salary {
        .main-block__title {
-            width: 110%;
             margin-left: -285px;
         }
         .main-block__subtitle {
@@ -221,6 +227,10 @@
                     width: 136px;
                 }
             }
+        }
+
+        .main-block__title-text--1 {
+            animation: tiltSingle 5s ease-in-out infinite;
         }
 
         .main-block__text {
@@ -336,4 +346,30 @@
             }
        }
     }
+}
+
+@keyframes tiltLeft {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-5deg); }
+  40% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes tiltRight {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(5deg); }
+  40% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes tiltSingle {
+  0%   { transform: rotate(-5deg); }
+  50%  { transform: rotate(5deg); }
+  100% { transform: rotate(-5deg); }
+}
+
+@keyframes arrowMooving {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(50%); }
+    100% { transform: translateX(0); }
 }

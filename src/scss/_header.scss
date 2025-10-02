@@ -1,9 +1,18 @@
+header {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  background: #7280e5;
+  z-index: 99;
+}
 .header {
   display: flex;
   padding: 30px 0;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  height: 116px;
 
   &__controls {
     flex: 1;
@@ -95,10 +104,3 @@
 }
 }
 
-.trip .header .lang-btn {
-   background: var(--Pink, #F3B2D9);
-    
-   &:hover, &.open {
-    background: var(--Yellow-bright, #F4CE24);
-  }
-}

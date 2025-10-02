@@ -88,7 +88,16 @@
     }
 
     &__main-title {
+        position: relative;
         text-align: center;
+
+        &-decor {
+            position: absolute;
+            top: 75px;
+            right: 405px;
+            width: 157px;
+            height: 157px;
+        }
     }
 
      &__title {
@@ -299,6 +308,11 @@
             border: 4px solid var(--Black, #1D1D1D);
             background: var(--Light-Blue, #9FBAF1);
             font-weight: 500;
+            transition: all .3s ease;
+
+            &:hover {
+                border-color: #EAF3B2;
+            }
 
             b {
                 color: var(--White, #FDFDF5);
@@ -370,7 +384,8 @@
              &--2 {
                 top: 80px;
                 right: 80px;
-                width: 81px;
+                width: 230px;
+                transform: rotate(20deg);
             }
 
               &--3 {
@@ -423,6 +438,13 @@
             font-size: 30px;
             font-weight: 500;
             letter-spacing: -0.66px;
+            transition: all .3s ease;
+
+            &:hover {
+                border-color: var(--Yellow-bright, #F4CE24);
+                box-shadow: 0 17px 0 0 #F4CE24;
+            }
+
 
             b {
                 color: var(--Dark-Blue, #3F4679);
@@ -555,6 +577,11 @@
                 position: relative;
                 box-shadow: 0 17px 0 0 #3F4679;
                 font-weight: 500;
+                transition: all .3s ease;
+
+                &:hover {
+                    background: #F3B2D9;
+                }
 
                  b {
                     font-style: italic;
@@ -565,9 +592,9 @@
 
         &__decor {
             position: absolute;
-            top: 230px;
-            left: 150px;
-            width: 64px;
+            top: 85px;
+            left: -150px;
+            width: 600px;
         }
     }
 
@@ -617,6 +644,11 @@
                 font-weight: 500;
                 color: var(--White, #FDFDF5);
                 position: relative;
+                transition: all .3s ease;
+
+                &:hover {
+                    background: #1D1D1D;
+                }
             }
 
             &:after {
@@ -669,6 +701,7 @@
                 right: -10px;
                 top: -265px;
                 width: 188px;
+                z-index: 2;
             }
 
             &--2 {
@@ -709,6 +742,7 @@
                 height: 103px;
                 width: 103px;
                 min-width: 103px;
+                transition: all .3s ease;
             }
 
             &-text {
@@ -726,6 +760,16 @@
                 color: var(--White, #FDFDF5);
                 font-size: 30px;
                 line-height: 160%;
+                transition: all .3s ease;
+            }
+
+            &:hover {
+                .travel-department__item-number {
+                    background: #EAF3B2;
+                }
+                .travel-department__item-text {
+                    background: #3F4679;
+                }
             }
         }
 

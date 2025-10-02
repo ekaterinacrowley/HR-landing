@@ -35,7 +35,7 @@
 
 html {
   height: 100%;
-  width: 1920px;
+  width: 100%;
   margin: 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
@@ -52,6 +52,7 @@ body {
   margin: 0;
   background: var(--Main-Blue, #7280E5);
   color: var(--Black, #1D1D1D);
+  padding-top: 116px;
 }
 body.trip {
   background: var(--Pink, #F3B2D9);
@@ -124,12 +125,22 @@ p {
   background: var(--White, #FDFDF5);
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #7280e5;
+  z-index: 99;
+}
+
 .header {
   display: flex;
   padding: 30px 0;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  height: 116px;
 }
 .header__controls {
   flex: 1;
@@ -211,13 +222,6 @@ p {
   transition: all 0.3s ease;
 }
 
-.trip .header .lang-btn {
-  background: var(--Pink, #F3B2D9);
-}
-.trip .header .lang-btn:hover, .trip .header .lang-btn.open {
-  background: var(--Yellow-bright, #F4CE24);
-}
-
 .main-block__container {
   display: flex;
   align-items: stretch;
@@ -258,10 +262,13 @@ p {
 }
 .main-block__title-text--1 {
   background: var(--Main-Yellow, #EAF3B2);
+  animation: tiltLeft 5s ease-in-out infinite;
 }
 .main-block__title-text--2 {
   background: var(--Light-Blue, #9FBAF1);
   align-self: flex-end;
+  animation: tiltRight 5s ease-in-out infinite;
+  animation-delay: 2.5s;
 }
 .main-block__subtitle {
   display: flex;
@@ -293,6 +300,9 @@ p {
   align-items: center;
   gap: 60px;
   margin-top: auto;
+}
+.main-block__text svg {
+  animation: arrowMooving 2s ease-in-out infinite;
 }
 .main-block__text p {
   color: var(--Main-Yellow, #EAF3B2);
@@ -359,7 +369,6 @@ p {
   height: auto;
 }
 .main-block--salary .main-block__title {
-  width: 110%;
   margin-left: -285px;
 }
 .main-block--salary .main-block__subtitle {
@@ -406,6 +415,9 @@ p {
   bottom: 80px;
   right: 160px;
   width: 136px;
+}
+.main-block--trip .main-block__title-text--1 {
+  animation: tiltSingle 5s ease-in-out infinite;
 }
 .main-block--trip .main-block__text {
   margin-top: 80px;
@@ -502,6 +514,56 @@ p {
   height: 89px;
 }
 
+@keyframes tiltLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes tiltRight {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes tiltSingle {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes arrowMooving {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .main-links {
   display: flex;
   padding: 100px 0 230px;
@@ -577,6 +639,16 @@ p {
   align-items: center;
   gap: 130px;
 }
+.salary-links__title {
+  position: relative;
+}
+.salary-links__title-decor {
+  position: absolute;
+  top: 65px;
+  right: 350px;
+  width: 129px;
+  height: 136px;
+}
 .salary-links__items {
   display: flex;
   flex-direction: column;
@@ -593,6 +665,27 @@ p {
   font-size: 80px;
   line-height: 120%;
   text-transform: uppercase;
+}
+.salary-links__item:before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 74px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='74' viewBox='0 0 44 74' fill='none'><path d='M29.3334 59V44.3333H14.6667V59H29.3334ZM6.10352e-05 59V73.6666H14.6667V59H6.10352e-05ZM14.6667 29.6666H29.3334V15H14.6667V29.6666ZM44.0001 29.6666H29.3334V44.3333H44.0001V29.6666ZM14.6667 15V0.333313H6.10352e-05V15H14.6667Z' fill='%23EAF3B2'/></svg>") center/contain no-repeat;
+}
+.salary-links__item:hover {
+  color: var(--Black, #1D1D1D);
+  margin-left: 104px;
+}
+.salary-links__item:hover:before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='74' viewBox='0 0 44 74' fill='none'><path d='M29.3334 59V44.3333H14.6667V59H29.3334ZM6.10352e-05 59V73.6666H14.6667V59H6.10352e-05ZM14.6667 29.6666H29.3334V15H14.6667V29.6666ZM44.0001 29.6666H29.3334V44.3333H44.0001V29.6666ZM14.6667 15V0.333313H6.10352e-05V15H14.6667Z' fill='%231D1D1D'/></svg>") center/contain no-repeat;
+}
+.salary-links__item--active {
+  color: var(--Black, #1D1D1D);
+  margin-left: 104px;
+}
+.salary-links__item--active:before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='74' viewBox='0 0 44 74' fill='none'><path d='M29.3334 59V44.3333H14.6667V59H29.3334ZM6.10352e-05 59V73.6666H14.6667V59H6.10352e-05ZM14.6667 29.6666H29.3334V15H14.6667V29.6666ZM44.0001 29.6666H29.3334V44.3333H44.0001V29.6666ZM14.6667 15V0.333313H6.10352e-05V15H14.6667Z' fill='%231D1D1D'/></svg>") center/contain no-repeat;
 }
 
 .salary-planned {
@@ -908,6 +1001,10 @@ p {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   position: relative;
+  transition: all 0.3s ease;
+}
+.salary-planned .principles__item-text:hover {
+  background: var(--Light-Blue, #9FBAF1);
 }
 .salary-planned .principles__item:nth-child(1):after {
   content: "";
@@ -955,6 +1052,21 @@ p {
 .salary-planned .principles__image img {
   width: 510px;
   height: 423px;
+}
+.salary-planned .principles__image img.principles__image-decor {
+  position: absolute;
+}
+.salary-planned .principles__image img.principles__image-decor--1 {
+  width: 157px;
+  height: 165px;
+  top: 420px;
+  right: 240px;
+}
+.salary-planned .principles__image img.principles__image-decor--2 {
+  width: 169px;
+  height: 243px;
+  top: -45px;
+  right: 20px;
 }
 .salary-planned .principles__image div {
   display: inline-flex;
@@ -1012,6 +1124,7 @@ p {
   color: var(--Light-Blue, #9FBAF1);
   font-weight: 700;
   text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 .salary-planned .conditions__item-text {
   color: var(--White, #FDFDF5);
@@ -1019,6 +1132,9 @@ p {
 }
 .salary-planned .conditions__item ul {
   margin: 0;
+}
+.salary-planned .conditions__item:hover .conditions__item-title {
+  color: var(--Pink, #F3B2D9);
 }
 .salary-planned .conditions__decor {
   position: absolute;
@@ -1033,9 +1149,7 @@ p {
 .salary-planned .conditions__decor--2 {
   top: -90px;
   right: 70px;
-}
-.salary-planned .conditions__decor--2 svg {
-  width: 61px;
+  width: 220px;
 }
 .salary-planned .responsible {
   display: flex;
@@ -1058,13 +1172,14 @@ p {
   color: var(--Main-Yellow, #EAF3B2);
   font-weight: 700;
   text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 .salary-planned .responsible__item-text {
   color: var(--White, #FDFDF5);
   font-weight: 500;
 }
 .salary-planned .responsible__item-text a {
-  color: var(--Pink, #F3B2D9);
+  color: var(--Yellow-bright, #F4CE24);
   font-style: italic;
   font-weight: 700;
   text-decoration-line: underline;
@@ -1073,6 +1188,9 @@ p {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+}
+.salary-planned .responsible__item-text a:hover {
+  color: var(--Pink, #F3B2D9);
 }
 .salary-planned .responsible__item--warning {
   padding: 40px;
@@ -1083,6 +1201,9 @@ p {
 }
 .salary-planned .responsible__item--warning svg {
   width: 25px;
+}
+.salary-planned .responsible__item:hover .responsible__item-title {
+  color: var(--Pink, #F3B2D9);
 }
 .salary-planned .responsible__decor {
   position: absolute;
@@ -1154,6 +1275,10 @@ p {
   background: var(--Main-Yellow, #EAF3B2);
   font-size: 30px;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+.salary-planned .matrix__factor:hover {
+  border-color: var(--Main-Blue, #7280E5);
 }
 .salary-planned .matrix__factor:first-child {
   width: 533px;
@@ -1171,6 +1296,13 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  position: relative;
+}
+.salary-planned .matrix__factor-image-decor {
+  position: absolute;
+  top: 100px;
+  right: 105px;
+  width: 100px;
 }
 .salary-planned .matrix__factor-image div {
   display: inline-flex;
@@ -1199,9 +1331,12 @@ p {
   width: 163px;
 }
 .salary-planned .example__decor--1 {
-  top: 0px;
+  top: 40px;
   right: 310px;
   width: 192px;
+  background: url(images/salary-decor-3.svg) no-repeat center;
+  background-size: 35%;
+  z-index: 1;
 }
 .salary-planned .example__decor--2 {
   top: auto;
@@ -1266,6 +1401,10 @@ p {
   background: var(--Main-Yellow, #EAF3B2);
   box-shadow: 0 17px 0 0 #3F4679;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+.salary-planned .rules__item-text:hover {
+  background: var(--Pink, #F3B2D9);
 }
 .salary-planned .rules__decor {
   position: absolute;
@@ -1276,9 +1415,10 @@ p {
   width: 109px;
 }
 .salary-planned .rules__decor--2 {
-  left: 150px;
-  top: 150px;
-  width: 71px;
+  left: 110px;
+  top: 110px;
+  width: 157px;
+  transform: rotate(-12deg);
 }
 .salary-planned .rules__decor--3 {
   left: -40px;
@@ -1286,9 +1426,10 @@ p {
   width: 115px;
 }
 .salary-planned .rules__decor--4 {
-  right: 0;
-  top: 1000px;
-  width: 71px;
+  right: -70px;
+  top: 1070px;
+  width: 157px;
+  transform: rotate(12deg);
 }
 .salary-planned .rules__decor--5 {
   right: 20px;
@@ -1330,6 +1471,10 @@ p {
   background: var(--Main-Blue, #7280E5);
   color: var(--White, #FDFDF5);
   position: relative;
+  transition: all 0.3s ease;
+}
+.salary-planned .rules--2 .rules__item-text:hover {
+  background: var(--Black, #1D1D1D);
 }
 .salary-planned .rules--2 .rules__item-text a {
   color: var(--Pink, #F3B2D9);
@@ -1394,6 +1539,17 @@ p {
   right: -40px;
   width: 163px;
 }
+.salary-planned .time__decor--1 {
+  left: 170px;
+  top: 60px;
+  right: auto;
+  width: 163px;
+}
+.salary-planned .time__decor--2 {
+  top: -120px;
+  right: 30px;
+  width: 138px;
+}
 .salary-planned .time__items {
   display: flex;
   align-items: flex-start;
@@ -1430,6 +1586,10 @@ p {
   background: var(--Light-Blue, #9FBAF1);
   color: var(--White, #FDFDF5);
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+.salary-planned .time__item-text:hover {
+  box-shadow: inset 0 0 0 4px var(--White, #FDFDF5);
 }
 .salary-planned .time__item-text ul {
   margin: 0;
@@ -1489,6 +1649,11 @@ p {
   box-shadow: 0 17px 0 0 #3F4679;
   font-size: 30px;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+.salary-planned .refuse__item:hover {
+  box-shadow: 0 17px 0 0 var(--Yellow-bright, #F4CE24);
+  border-color: var(--Yellow-bright, #F4CE24);
 }
 .salary-planned .steps {
   width: 1394px;
@@ -1530,6 +1695,10 @@ p {
   box-shadow: 0 17px 0 0 #EAF3B2;
   font-weight: 500;
   position: relative;
+  transition: all 0.3s ease;
+}
+.salary-planned .steps__item-text:hover {
+  background: var(--White, #FDFDF5);
 }
 .salary-planned .steps__item:after {
   content: "";
@@ -1576,6 +1745,7 @@ p {
   margin-left: -50px;
   margin-top: -30px;
   z-index: 1;
+  animation: float 3s ease-in-out infinite;
 }
 .salary-planned .steps__subtitle div {
   display: inline-flex;
@@ -1659,6 +1829,13 @@ p {
   position: absolute;
   width: 940px;
 }
+.salary-planned .requirements__image-decor {
+  top: -140px;
+  left: 370px;
+  width: 282px;
+  transform: rotate(15deg);
+  position: absolute;
+}
 .salary-planned .requirements__image-text {
   display: flex;
   flex-direction: column;
@@ -1683,11 +1860,29 @@ p {
   font-weight: 700;
   line-height: 120%;
   text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.salary-planned .requirements__image-text div:hover {
+  border-color: var(--Yellow-bright, #F4CE24);
 }
 .salary-planned .requirements__decor {
   position: absolute;
 }
 
+@keyframes float {
+  0%, 100% {
+    width: 480px;
+    gap: 10px;
+    margin-left: -50px;
+    margin-top: -30px;
+  }
+  50% {
+    width: 580px;
+    gap: 20px;
+    margin-left: -70px;
+    margin-top: -50px;
+  }
+}
 .salary-unplanned {
   display: flex;
   flex-direction: column;
@@ -1817,6 +2012,11 @@ p {
   border: 8px solid var(--Black, #1D1D1D);
   background: var(--Light-Blue, #9FBAF1);
   font-weight: 700;
+  transition: all 0.3s ease;
+}
+.salary-unplanned .justification__text:hover {
+  color: #FDFDF5;
+  border-color: #FDFDF5;
 }
 .salary-unplanned .justification__subtitle {
   display: flex;
@@ -1852,12 +2052,22 @@ p {
   align-items: flex-start;
   gap: 60px;
 }
+.salary-unplanned .criteria__decor {
+  position: absolute;
+  top: -85px;
+  right: 0;
+  width: 154px;
+}
 .salary-unplanned .criteria__item {
   display: flex;
   align-items: center;
   gap: 40px;
   color: var(--Main-Yellow, #EAF3B2);
   text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.salary-unplanned .criteria__item:hover {
+  color: #F3B2D9;
 }
 .salary-unplanned .criteria__item:before {
   content: "";
@@ -1918,6 +2128,7 @@ p {
   text-transform: uppercase;
   margin-bottom: -20px;
   z-index: 1;
+  transition: all 0.3s ease;
 }
 .salary-unplanned .responsible__item-text {
   display: flex;
@@ -1931,6 +2142,9 @@ p {
   color: var(--White, #FDFDF5);
   text-align: center;
   font-weight: 500;
+}
+.salary-unplanned .responsible__item:hover .responsible__item-title {
+  background: #F3B2D9;
 }
 .salary-unplanned .steps {
   width: 1107px;
@@ -1972,6 +2186,10 @@ p {
   box-shadow: 0 17px 0 0 #3F4679;
   font-weight: 500;
   position: relative;
+  transition: all 0.3s ease;
+}
+.salary-unplanned .steps__item-text:hover {
+  background: #9FBAF1;
 }
 .salary-unplanned .steps__item:after {
   content: "";
@@ -2111,7 +2329,15 @@ p {
   gap: 120px;
 }
 .trip__main-title {
+  position: relative;
   text-align: center;
+}
+.trip__main-title-decor {
+  position: absolute;
+  top: 75px;
+  right: 405px;
+  width: 157px;
+  height: 157px;
 }
 .trip__title {
   display: flex;
@@ -2280,6 +2506,10 @@ p {
   border: 4px solid var(--Black, #1D1D1D);
   background: var(--Light-Blue, #9FBAF1);
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+.trip .main-rules__item:hover {
+  border-color: #EAF3B2;
 }
 .trip .main-rules__item b {
   color: var(--White, #FDFDF5);
@@ -2343,7 +2573,8 @@ p {
 .trip .main-rules__decor--2 {
   top: 80px;
   right: 80px;
-  width: 81px;
+  width: 230px;
+  transform: rotate(20deg);
 }
 .trip .main-rules__decor--3 {
   bottom: 60px;
@@ -2390,6 +2621,11 @@ p {
   font-size: 30px;
   font-weight: 500;
   letter-spacing: -0.66px;
+  transition: all 0.3s ease;
+}
+.trip .types__item:hover {
+  border-color: var(--Yellow-bright, #F4CE24);
+  box-shadow: 0 17px 0 0 #F4CE24;
 }
 .trip .types__item b {
   color: var(--Dark-Blue, #3F4679);
@@ -2503,15 +2739,19 @@ p {
   position: relative;
   box-shadow: 0 17px 0 0 #3F4679;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+.trip .rules__item-text:hover {
+  background: #F3B2D9;
 }
 .trip .rules__item-text b {
   font-style: italic;
 }
 .trip .rules__decor {
   position: absolute;
-  top: 230px;
-  left: 150px;
-  width: 64px;
+  top: 85px;
+  left: -150px;
+  width: 600px;
 }
 .trip .steps {
   width: 1107px;
@@ -2558,6 +2798,10 @@ p {
   font-weight: 500;
   color: var(--White, #FDFDF5);
   position: relative;
+  transition: all 0.3s ease;
+}
+.trip .steps__item-text:hover {
+  background: #1D1D1D;
 }
 .trip .steps__item:after {
   content: "";
@@ -2600,6 +2844,7 @@ p {
   right: -10px;
   top: -265px;
   width: 188px;
+  z-index: 2;
 }
 .trip .steps__decor--2 {
   right: 0;
@@ -2636,6 +2881,7 @@ p {
   height: 103px;
   width: 103px;
   min-width: 103px;
+  transition: all 0.3s ease;
 }
 .trip .travel-department__item-text {
   display: flex;
@@ -2652,6 +2898,13 @@ p {
   color: var(--White, #FDFDF5);
   font-size: 30px;
   line-height: 160%;
+  transition: all 0.3s ease;
+}
+.trip .travel-department__item:hover .travel-department__item-number {
+  background: #EAF3B2;
+}
+.trip .travel-department__item:hover .travel-department__item-text {
+  background: #3F4679;
 }
 .trip .travel-department__image {
   position: relative;
@@ -3233,8 +3486,19 @@ footer .footer__content {
   bottom: 0;
   right: 12%;
 }
-footer .footer__content img {
-  width: 200px;
+footer .footer__image {
+  position: relative;
+  overflow: hidden;
+  width: 260px;
+  height: 155px;
+}
+footer .footer__image img {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  max-width: 250px;
+  max-height: 250px;
+  width: 250px;
 }
 footer .footer__text {
   display: inline-flex;
@@ -3286,6 +3550,15 @@ body.en .trip__title--7 div:nth-child(4) {
 body.en .trip__title--8 div:nth-child(4) {
   margin-left: auto;
   margin-right: 165px;
+}
+body.en .main-block--dayoff .main-block__subtitle {
+  width: 300px;
+}
+body.en .dayoff__title--3 {
+  width: 1420px;
+}
+body.en .dayoff .working-off__item:first-child {
+  padding-bottom: 110px;
 }
 
 /*# sourceMappingURL=styles.css.map */
