@@ -59,7 +59,7 @@
 
         &--9 {
             background: var(--Light-Blue, #9FBAF1);
-            padding: 140px 0 50px;
+            padding: 140px 0 350px;
         }
 
         &--10 {
@@ -957,7 +957,7 @@
                     text-underline-position: from-font;
 
                      &:hover {
-                         color: var(--Black, #1D1D1D);    
+                         color: var(--Yellow-bright, #F4CE24);    
                     }
                 }
 
@@ -1044,7 +1044,7 @@
 
         &__items {
             display: flex;
-            align-items: flex-start;
+            align-items: stretch;
             gap: 40px;
         }
 
@@ -1071,6 +1071,7 @@
             }
 
             &-text {
+                flex: 1;
                 display: flex;
                 padding: 40px;
                 flex-direction: column;
@@ -1257,6 +1258,9 @@
         }
 
         &__subtitle {
+            position: absolute;
+            bottom: -300px;
+            left: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1315,7 +1319,7 @@
             }
             &--4 {
                 left: 510px;
-                bottom: -10px;
+                bottom: -300px;
                 width: 152px;
             }
             &--5 {

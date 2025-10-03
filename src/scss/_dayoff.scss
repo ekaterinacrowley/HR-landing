@@ -42,6 +42,15 @@
 
      &__main-title {
         text-align: center;
+        position: relative;
+
+         &-decor {
+            position: absolute;
+            top: 75px;
+            right: 405px;
+            width: 157px;
+            height: 157px;
+        }
     }
 
     &__title {
@@ -179,6 +188,12 @@
                 background: var(--White, #FDFDF5);
                 font-weight: 500;
                 position: relative;
+                transition: all .3s ease;
+
+                &:hover {
+                    background: #9FBAF1;
+                    border-color: #9FBAF1;
+                }
 
                 b {
                     font-style: italic;
@@ -286,6 +301,25 @@
                 }
             }
         }
+
+        &__decor {
+            position: absolute;
+
+            &--1 {
+                width: 190px;
+                height: 190px;
+                top: 60px;
+                left: 65px;
+                transform: rotate(30deg);
+            }
+
+            &--2 {
+                width: 151px;
+                height: 120px;
+                right: 0;
+                top: 20px;
+            }
+        }
     }
 
     .working-off {
@@ -308,6 +342,13 @@
             font-size: 30px;
             font-weight: 500;
             letter-spacing: -0.66px;
+            transition: all .3s ease;
+
+            &:hover {
+                border-color: #F4CE24;
+                box-shadow: 0 17px 0 0 var(--Yellow-bright, #F4CE24);
+            }
+
         }
 
         &__image {
@@ -370,6 +411,11 @@
             background: rgba(255, 255, 255, 0.35);
             font-weight: 500;
             flex: 1;
+            transition: all .3s ease;
+
+            &:hover {
+                border-color: #FDFDF5;
+            }
 
             b {
                 font-style: italic;
@@ -383,9 +429,15 @@
 
         &__decor {
             position: absolute;
-             top: 50px;
+            top: 50px;
             right: -40px;
             width: 163px;
+
+            &--1 {
+                top: 200px;
+                right: 0;
+                width: 96px;
+            }
         }
     }
 }

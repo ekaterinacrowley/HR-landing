@@ -61,6 +61,7 @@ body {
   background: var(--Main-Blue, #7280E5);
   color: var(--Black, #1D1D1D);
   padding-top: 116px;
+  overflow-x: hidden;
 
   &.trip {
     background: var(--Pink, #F3B2D9);
@@ -158,7 +159,9 @@ body.en {
   .salary-planned__title--3 {
     width: 1050px;
 }
-
+  // .salary-planned__title--4 {
+  //     width: 1190px;
+  // }
   .salary-planned__title--4 div:nth-child(5) {
     margin-left: 0;
   }
@@ -185,6 +188,10 @@ body.en {
     margin-left: auto;
     margin-right: 165px;
   }
+
+  .expenses__decor {
+    bottom: 0;
+  } 
 
   .main-block--dayoff .main-block__subtitle {
       width: 300px;

@@ -53,6 +53,14 @@
          &--title {
             background: transparent;
             padding: 40px 0;
+
+            &-decor {
+                position: absolute;
+                width: 313px;
+                height: 313px;
+                right: 325px;
+                top: 35px;
+            }
          }
 
         &--9 {
@@ -821,7 +829,14 @@
         display: flex;
         flex-direction: column;
         gap: 60px;
-        z-index: 1;
+        z-index: 1; 
+
+        &__top-decor {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: -290px;
+        }
 
         &__item {
             padding: 40px;
@@ -830,6 +845,11 @@
             background: var(--Light-Blue, #9FBAF1);
             box-shadow: 0 17px 0 0 #3F4679;
             font-size: 30px;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: #EAF3B2;
+            }
 
             b {
                 font-style: italic;
@@ -841,7 +861,7 @@
             top: 570px;
             left: 0;
             right: 0;     
-            bottom: 40px;
+            bottom: 65px;
             background:url("images/trip-main-title-5.svg") top center repeat-y;
             z-index: 0;  
             background-size: contain;
@@ -866,6 +886,11 @@
             background: rgba(255, 255, 255, 0.35);
             flex: 1;
             font-weight: 500;
+            transition: all .3s ease;
+
+            &:hover {
+                border-color: #FDFDF5;
+            }
 
             &:last-child {
                 min-width: 100%;
@@ -881,10 +906,10 @@
                 width: 188px;
             }
             &--2 {
-                width: 100px;
-                top: -10px;
-                right: -10px;
-                transform: rotate(-60deg);
+                width: 600px;
+                height: 600px;
+                top: -70px;
+                right: -380px;
             }
         }
     }
@@ -917,20 +942,28 @@
         }
 
         &__item {
-                display: flex;
-                align-items: center;
-                gap: 40px;
-                color: var(--Main-Yellow, #EAF3B2);
-                text-transform: uppercase;
-                width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            color: var(--Main-Yellow, #EAF3B2);
+            text-transform: uppercase;
+            width: 100%;
+                transition: all .3s ease;
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='42' viewBox='0 0 25 42' fill='none'><path d='M16.4 33.3V25.1H8.2V33.3H16.4ZM0 33.3V41.5H8.2V33.3H0ZM8.2 16.9H16.4V8.7H8.2V16.9ZM24.6 16.9H16.4V25.1H24.6V16.9ZM8.2 8.7V0.5H0V8.7H8.2Z' fill='%23EAF3B2'/></svg>") center/contain no-repeat;
+            }
+
+            &:hover {
+                color: #F3B2D9;
 
                 &:before {
-                    content: "";
-                    display: inline-block;
-                    width: 24px;
-                    height: 24px;
-                    background: url(images/arrow.svg) no-repeat left center;
-                    background-size: contain;
+                    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='42' viewBox='0 0 25 42' fill='none'><path d='M16.4 33.3V25.1H8.2V33.3H16.4ZM0 33.3V41.5H8.2V33.3H0ZM8.2 16.9H16.4V8.7H8.2V16.9ZM24.6 16.9H16.4V25.1H24.6V16.9ZM8.2 8.7V0.5H0V8.7H8.2Z' fill='%23F3B2D9'/></svg>") center/contain no-repeat;
+                }
             }
         }
 
@@ -988,6 +1021,11 @@
             font-weight: 600;
             text-transform: uppercase;
             position: relative;
+            transition: all .3s ease;
+
+            &:hover {
+                color: #EAF3B2;
+            }
 
             &:last-child {
                 border-bottom: none;

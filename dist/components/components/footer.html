@@ -3,42 +3,60 @@
        <img src="images/logo.svg" alt="Grown&Scale" />
        <div class="footer__content">
             <div class="footer__text">коллега</div>
-            <img src="images/footer-img.webp" alt="decor" />
+            <div class="footer__image">
+                <img src="images/footer-img.gif" alt="Grown&Scale" />
+            </div>
        </div>
     </div>
 
     <script>
-        const blocks = document.querySelectorAll(".salary");
+       const blocks = document.querySelectorAll(".salary");
         const links = document.querySelectorAll(".salary-links__item");
 
         links.forEach(link => {
-            link.addEventListener("click", e => {
-                e.preventDefault();
-                const target = link.dataset.link;
+        link.addEventListener("click", e => {
+            e.preventDefault();
+            const target = link.dataset.link;
 
-                blocks.forEach(block => {
-                if (block.dataset.block === target) {
-                    // показать выбранный
-                    block.style.maxHeight = block.scrollHeight + "px";
-                    block.style.opacity = "1";
-                } else {
-                    // скрыть остальные
-                    block.style.maxHeight = "0";
-                    block.style.opacity = "0";
-                }
-                });
+            // Скрываем все блоки
+            blocks.forEach(block => {
+            if (block.dataset.block === target) {
+                block.style.maxHeight = block.scrollHeight + "px";
+                block.style.opacity = "1";
+            } else {
+                block.style.maxHeight = "0";
+                block.style.opacity = "0";
+            }
             });
+
+            // Убираем класс active со всех ссылок
+            links.forEach(l => l.classList.remove("salary-links__item--active"));
+
+            // Добавляем класс только к текущей ссылке
+            link.classList.add("salary-links__item--active");
+        });
         });
 
         blocks.forEach(block => {
-            const closeBtn = block.querySelector(".close-link");
-            if (closeBtn) {
-                closeBtn.addEventListener("click", e => {
-                e.preventDefault();
-                block.style.maxHeight = "0";
-                block.style.opacity = "0";
-                });
+        const closeBtn = block.querySelector(".close-link");
+        if (closeBtn) {
+            closeBtn.addEventListener("click", e => {
+            e.preventDefault();
+
+            // закрываем сам блок
+            block.style.maxHeight = "0";
+            block.style.opacity = "0";
+
+            // снимаем active у соответствующей ссылки
+            const relatedLink = document.querySelector(
+                `.salary-links__item[data-link="${block.dataset.block}"]`
+            );
+            if (relatedLink) {
+                relatedLink.classList.remove("salary-links__item--active");
             }
+            });
+        }
         });
+
 </script>
 </footer> 

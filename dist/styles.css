@@ -53,6 +53,7 @@ body {
   background: var(--Main-Blue, #7280E5);
   color: var(--Black, #1D1D1D);
   padding-top: 116px;
+  overflow-x: hidden;
 }
 body.trip {
   background: var(--Pink, #F3B2D9);
@@ -380,7 +381,7 @@ header {
   align-self: flex-end;
 }
 .main-block--salary .main-block__image {
-  margin-bottom: -75px;
+  margin-bottom: -120px;
   width: 820px;
   height: auto;
 }
@@ -741,7 +742,7 @@ header {
 }
 .salary-planned__block--9 {
   background: var(--Light-Blue, #9FBAF1);
-  padding: 140px 0 50px;
+  padding: 140px 0 350px;
 }
 .salary-planned__block--10 {
   background: var(--Black, #1D1D1D);
@@ -1488,7 +1489,7 @@ header {
   text-underline-position: from-font;
 }
 .salary-planned .rules--2 .rules__item-text a:hover {
-  color: var(--Black, #1D1D1D);
+  color: var(--Yellow-bright, #F4CE24);
 }
 .salary-planned .rules--2 .rules__item-text b {
   font-style: italic;
@@ -1552,7 +1553,7 @@ header {
 }
 .salary-planned .time__items {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 40px;
 }
 .salary-planned .time__item {
@@ -1576,6 +1577,7 @@ header {
   letter-spacing: -0.88px;
 }
 .salary-planned .time__item-text {
+  flex: 1;
   display: flex;
   padding: 40px;
   flex-direction: column;
@@ -1735,6 +1737,9 @@ header {
   z-index: 1;
 }
 .salary-planned .steps__subtitle {
+  position: absolute;
+  bottom: -300px;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1789,7 +1794,7 @@ header {
 }
 .salary-planned .steps__decor--4 {
   left: 510px;
-  bottom: -10px;
+  bottom: -300px;
   width: 152px;
 }
 .salary-planned .steps__decor--5 {
@@ -2303,6 +2308,13 @@ header {
 .trip__block--title {
   background: transparent;
   padding: 40px 0;
+}
+.trip__block--title-decor {
+  position: absolute;
+  width: 313px;
+  height: 313px;
+  right: 325px;
+  top: 35px;
 }
 .trip__block--9 {
   background: var(--Light-Blue, #9FBAF1);
@@ -2950,6 +2962,12 @@ header {
   gap: 60px;
   z-index: 1;
 }
+.trip .expenses__top-decor {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: -290px;
+}
 .trip .expenses__item {
   padding: 40px;
   gap: 40px;
@@ -2957,6 +2975,10 @@ header {
   background: var(--Light-Blue, #9FBAF1);
   box-shadow: 0 17px 0 0 #3F4679;
   font-size: 30px;
+  transition: all 0.3s ease;
+}
+.trip .expenses__item:hover {
+  background-color: #EAF3B2;
 }
 .trip .expenses__item b {
   font-style: italic;
@@ -2966,7 +2988,7 @@ header {
   top: 570px;
   left: 0;
   right: 0;
-  bottom: 40px;
+  bottom: 65px;
   background: url("images/trip-main-title-5.svg") top center repeat-y;
   z-index: 0;
   background-size: contain;
@@ -2989,6 +3011,10 @@ header {
   background: rgba(255, 255, 255, 0.35);
   flex: 1;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+.trip .informing__item:hover {
+  border-color: #FDFDF5;
 }
 .trip .informing__item:last-child {
   min-width: 100%;
@@ -3002,10 +3028,10 @@ header {
   width: 188px;
 }
 .trip .informing__decor--2 {
-  width: 100px;
-  top: -10px;
-  right: -10px;
-  transform: rotate(-60deg);
+  width: 600px;
+  height: 600px;
+  top: -70px;
+  right: -380px;
 }
 .trip .application {
   display: flex;
@@ -3039,14 +3065,20 @@ header {
   color: var(--Main-Yellow, #EAF3B2);
   text-transform: uppercase;
   width: 100%;
+  transition: all 0.3s ease;
 }
 .trip .application__item:before {
   content: "";
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(images/arrow.svg) no-repeat left center;
-  background-size: contain;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='42' viewBox='0 0 25 42' fill='none'><path d='M16.4 33.3V25.1H8.2V33.3H16.4ZM0 33.3V41.5H8.2V33.3H0ZM8.2 16.9H16.4V8.7H8.2V16.9ZM24.6 16.9H16.4V25.1H24.6V16.9ZM8.2 8.7V0.5H0V8.7H8.2Z' fill='%23EAF3B2'/></svg>") center/contain no-repeat;
+}
+.trip .application__item:hover {
+  color: #F3B2D9;
+}
+.trip .application__item:hover:before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='42' viewBox='0 0 25 42' fill='none'><path d='M16.4 33.3V25.1H8.2V33.3H16.4ZM0 33.3V41.5H8.2V33.3H0ZM8.2 16.9H16.4V8.7H8.2V16.9ZM24.6 16.9H16.4V25.1H24.6V16.9ZM8.2 8.7V0.5H0V8.7H8.2Z' fill='%23F3B2D9'/></svg>") center/contain no-repeat;
 }
 .trip .application__links {
   display: flex;
@@ -3094,6 +3126,10 @@ header {
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
+  transition: all 0.3s ease;
+}
+.trip .check-list__item:hover {
+  color: #EAF3B2;
 }
 .trip .check-list__item:last-child {
   border-bottom: none;
@@ -3165,6 +3201,14 @@ header {
 }
 .dayoff__main-title {
   text-align: center;
+  position: relative;
+}
+.dayoff__main-title-decor {
+  position: absolute;
+  top: 75px;
+  right: 405px;
+  width: 157px;
+  height: 157px;
 }
 .dayoff__title {
   display: flex;
@@ -3282,6 +3326,11 @@ header {
   background: var(--White, #FDFDF5);
   font-weight: 500;
   position: relative;
+  transition: all 0.3s ease;
+}
+.dayoff .rules__item-text:hover {
+  background: #9FBAF1;
+  border-color: #9FBAF1;
 }
 .dayoff .rules__item-text b {
   font-style: italic;
@@ -3377,6 +3426,22 @@ header {
   margin-top: -30px;
   margin-left: 50px;
 }
+.dayoff .rules__decor {
+  position: absolute;
+}
+.dayoff .rules__decor--1 {
+  width: 190px;
+  height: 190px;
+  top: 60px;
+  left: 65px;
+  transform: rotate(30deg);
+}
+.dayoff .rules__decor--2 {
+  width: 151px;
+  height: 120px;
+  right: 0;
+  top: 20px;
+}
 .dayoff .working-off {
   display: flex;
   align-items: flex-start;
@@ -3397,6 +3462,11 @@ header {
   font-size: 30px;
   font-weight: 500;
   letter-spacing: -0.66px;
+  transition: all 0.3s ease;
+}
+.dayoff .working-off__item:hover {
+  border-color: #F4CE24;
+  box-shadow: 0 17px 0 0 var(--Yellow-bright, #F4CE24);
 }
 .dayoff .working-off__image {
   position: absolute;
@@ -3450,6 +3520,10 @@ header {
   background: rgba(255, 255, 255, 0.35);
   font-weight: 500;
   flex: 1;
+  transition: all 0.3s ease;
+}
+.dayoff .relocation__item:hover {
+  border-color: #FDFDF5;
 }
 .dayoff .relocation__item b {
   font-style: italic;
@@ -3462,6 +3536,11 @@ header {
   top: 50px;
   right: -40px;
   width: 163px;
+}
+.dayoff .relocation__decor--1 {
+  top: 200px;
+  right: 0;
+  width: 96px;
 }
 
 footer {
@@ -3550,6 +3629,9 @@ body.en .trip__title--7 div:nth-child(4) {
 body.en .trip__title--8 div:nth-child(4) {
   margin-left: auto;
   margin-right: 165px;
+}
+body.en .expenses__decor {
+  bottom: 0;
 }
 body.en .main-block--dayoff .main-block__subtitle {
   width: 300px;
