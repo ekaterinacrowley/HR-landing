@@ -15,6 +15,8 @@ p {
   max-width: 87.5vw; /* 1680px */
 }
 
+
+
 .header {
   padding: 1.5625vw 0; /* 30px 0 */
 }
@@ -1828,6 +1830,16 @@ body.en .dayoff__title--3 {
 body.en .dayoff .working-off__item:first-child {
   padding-bottom: 5.7vw; /* 110px */  
 }
+
+.fs30 {
+  font-size: 1.5625vw; /* 30px */
+  line-height: 140%;
+}
+
+.fs35 {
+  font-size: 1.8229vw; /* 35px */
+}
+
 }
 
 
@@ -1907,3 +1919,56 @@ body {
         margin-top: -2.60vw; /* -50 / 1920 * 100 */
     }
 }
+
+ .matrix__table {
+    background: #FDFDF5;
+    font-weight: 600;
+    position: absolute;
+    bottom: 1.18vw;
+    left: 1.18vw;
+    right: 1.18vw;
+  }
+
+  .matrix__table table {
+    border-collapse: collapse;
+  }
+
+  .matrix__table table td {
+    padding: 1.12vw; /* 28px */
+  }
+
+  .matrix__table table td.fs35 {
+    font-weight: 400;
+  }
+
+  .example__table {
+    font-weight: 600;
+    font-size: 1.44583vw; /* 28px */
+    line-height: 160%;
+    position: absolute;
+    bottom: 1.18vw;
+    left: 1.18vw;
+    right: 1.18vw;
+  }
+
+  .example__table table {
+    border-collapse: collapse;
+  }
+
+  .example__table-title {
+    display: flex;
+    padding: 0.6vw 2vw 1.4vw;
+    gap: 9vw;
+    background: #9FBAF1;
+  }
+
+   .example__table table td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 1.7vw 1vw; /* 30px 0 */
+  }
+
+   .example__table table tr + tr td + td {
+    font-size: 1.8229vw; /* 35px */
+    font-weight: 400;
+  }
