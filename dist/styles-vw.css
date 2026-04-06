@@ -1840,6 +1840,117 @@ body.en .dayoff .working-off__item:first-child {
   font-size: 1.8229vw; /* 35px */
 }
 
+
+ .matrix__table {
+    bottom: 1.18vw /* 22.7 / 1920 * 100 */;
+    left: 1.18vw /* 22.7 / 1920 * 100 */;
+    right: 1.18vw /* 22.7 / 1920 * 100 */;
+  }
+
+  .matrix__table table td {
+    padding: 1.12vw; /* 28px */
+  }
+
+  .example__table {
+    font-weight: 600;
+    font-size: 1.44583vw; /* 28px */
+    line-height: 160%;
+    position: absolute;
+    bottom: 1.18vw;
+    left: 1.18vw;
+    right: 1.18vw;
+  }
+
+  .example__table table {
+    border-collapse: collapse;
+  }
+
+  .example__table-title {
+    display: flex;
+    padding: 0.6vw 2vw 1.4vw;
+    gap: 9vw; 
+    background: #9FBAF1;
+  }
+
+   .example__table table td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 1.7vw 1vw; /* 30px 0 */
+  }
+
+   .example__table table tr + tr td + td {
+    font-size: 1.8229vw; /* 35px */
+    font-weight: 400;
+  }
+
+  .time__table {
+    line-height: 160%;
+    position: absolute;
+    bottom: 1.18vw;
+    left: 1.14vw;
+    right: 1.14vw;
+  }
+
+  .time__table-title {
+     display: flex;
+    padding: 0.2vw 3vw 1vw;
+    background: #9FBAF1;
+  }
+
+  .time__table-title div {
+    display: flex;
+    align-items: center;
+    border-radius: 1.0417vw; /* 20px */
+    border: 0.2vw solid var(--White, #FDFDF5);
+    background: var(--Light-Blue, #9FBAF1);
+    color: var(--White, #FDFDF5);
+    padding: 0.3vw 4vw 0.3vw 2vw;
+    gap: 2vw;
+  }
+
+  .time__table-title div svg {
+    width: 0.7vw;
+  }
+
+    .time__table table {
+      border-collapse: collapse;
+      background: #FDFDF5;
+  }
+
+     .time__table table  td {
+      vertical-align: middle;
+      padding: 1.6vw 1vw; /* 30px 0 */
+  }
+
+  
+ .relocation__table {
+  font-weight: 600;
+  font-size: 1.02vw; /* 20px */
+  line-height: 160%;
+  position: absolute;
+  bottom: 1.18vw;
+  left: 1.18vw;
+  right: 1.18vw;
+}
+
+ .relocation__table th {
+      padding: 0.5208vw 0.2604vw; /* 20px 10px */
+      flex-direction: column;
+      text-align: center;
+      vertical-align: top;
+      border-right: 1px solid #F5F5ED;
+      border-bottom: 1px solid #F5F5ED;
+      background: #CFDDF8;
+ }
+
+    .relocation__table td {
+      padding: 0.5308vw 0.2604vw; /* 20px 10px */
+    text-align: center;
+          vertical-align: middle;
+          border-right: 1px solid #CFDDF8;
+    border-bottom: 1px solid #CFDDF8;
+    background: var(--White, #FDFDF5);
+    }
 }
 
 
@@ -1920,55 +2031,4 @@ body {
     }
 }
 
- .matrix__table {
-    background: #FDFDF5;
-    font-weight: 600;
-    position: absolute;
-    bottom: 1.18vw;
-    left: 1.18vw;
-    right: 1.18vw;
-  }
-
-  .matrix__table table {
-    border-collapse: collapse;
-  }
-
-  .matrix__table table td {
-    padding: 1.12vw; /* 28px */
-  }
-
-  .matrix__table table td.fs35 {
-    font-weight: 400;
-  }
-
-  .example__table {
-    font-weight: 600;
-    font-size: 1.44583vw; /* 28px */
-    line-height: 160%;
-    position: absolute;
-    bottom: 1.18vw;
-    left: 1.18vw;
-    right: 1.18vw;
-  }
-
-  .example__table table {
-    border-collapse: collapse;
-  }
-
-  .example__table-title {
-    display: flex;
-    padding: 0.6vw 2vw 1.4vw;
-    gap: 9vw;
-    background: #9FBAF1;
-  }
-
-   .example__table table td {
-    vertical-align: middle;
-    text-align: center;
-    padding: 1.7vw 1vw; /* 30px 0 */
-  }
-
-   .example__table table tr + tr td + td {
-    font-size: 1.8229vw; /* 35px */
-    font-weight: 400;
-  }
+ 
