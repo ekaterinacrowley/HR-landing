@@ -1842,23 +1842,19 @@ body.en .dayoff .working-off__item:first-child {
 
 
  .matrix__table {
-    bottom: 1.18vw /* 22.7 / 1920 * 100 */;
-    left: 1.18vw /* 22.7 / 1920 * 100 */;
-    right: 1.18vw /* 22.7 / 1920 * 100 */;
+     padding: 7.031vw 1.042vw 1.042vw;
   }
 
   .matrix__table table td {
-    padding: 1.12vw; /* 28px */
+   padding: 1.094vw 1.458vw;
   }
+
 
   .example__table {
     font-weight: 600;
     font-size: 1.44583vw; /* 28px */
     line-height: 160%;
-    position: absolute;
-    bottom: 1.18vw;
-    left: 1.18vw;
-    right: 1.18vw;
+    padding: 2.344vw 1.042vw 1.042vw;
   }
 
   .example__table table {
@@ -1867,7 +1863,7 @@ body.en .dayoff .working-off__item:first-child {
 
   .example__table-title {
     display: flex;
-    padding: 0.6vw 2vw 1.4vw;
+    padding: 0.625vw 1.667vw 1.823vw;
     gap: 9vw; 
     background: #9FBAF1;
   }
@@ -1875,7 +1871,11 @@ body.en .dayoff .working-off__item:first-child {
    .example__table table td {
     vertical-align: middle;
     text-align: center;
-    padding: 1.7vw 1vw; /* 30px 0 */
+    padding: 1.67vw 1vw; /* 30px 0 */
+  }
+
+  body.en .example__table table td {
+    padding: 1.6vw 1vw; 
   }
 
    .example__table table tr + tr td + td {
@@ -1885,10 +1885,7 @@ body.en .dayoff .working-off__item:first-child {
 
   .time__table {
     line-height: 160%;
-    position: absolute;
-    bottom: 1.18vw;
-    left: 1.14vw;
-    right: 1.14vw;
+    padding: 2.344vw 1.042vw 1.042vw;
   }
 
   .time__table-title {
@@ -1919,18 +1916,18 @@ body.en .dayoff .working-off__item:first-child {
 
      .time__table table  td {
       vertical-align: middle;
-      padding: 1.6vw 1vw; /* 30px 0 */
+      padding: 1.7vw 1vw; /* 30px 0 */
   }
 
+  body.en .time__table table td {
+      padding: 2.04vw 1vw;
+  }
   
  .relocation__table {
   font-weight: 600;
   font-size: 1.02vw; /* 20px */
   line-height: 160%;
-  position: absolute;
-  bottom: 1.18vw;
-  left: 1.18vw;
-  right: 1.18vw;
+  padding: 7.031vw 1.042vw 1.042vw;
 }
 
  .relocation__table th {
@@ -1944,13 +1941,18 @@ body.en .dayoff .working-off__item:first-child {
  }
 
     .relocation__table td {
-      padding: 0.5308vw 0.2604vw; /* 20px 10px */
-    text-align: center;
+      padding: 0.6308vw 0.2604vw; /* 20px 10px */
+      text-align: center;
           vertical-align: middle;
           border-right: 1px solid #CFDDF8;
     border-bottom: 1px solid #CFDDF8;
     background: var(--White, #FDFDF5);
     }
+
+    body.en .relocation__table td {
+      padding: 1vw 0.5vw;
+    }
+
 }
 
 

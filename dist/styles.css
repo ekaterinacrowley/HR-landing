@@ -1235,6 +1235,7 @@ header {
 }
 .salary-planned .matrix__image {
   position: relative;
+  width: 100%;
 }
 .salary-planned .matrix__decor {
   position: absolute;
@@ -3644,12 +3645,11 @@ body.en .dayoff .working-off__item:first-child {
 }
 
 .matrix__table {
-   background: #FDFDF5;
-    font-weight: 600;
-    position: absolute;
-    bottom: 22px /* 22 / 1920 * 100 */;
-    left: 22px /* 22 / 1920 * 100 */;
-    right: 22px /* 22 / 1920 * 100 */;
+  background: #FDFDF5;
+  font-weight: 600;
+  padding: 135px 21px 20px;
+  background: url(images/matrix-img-2.webp) top center no-repeat;
+  background-size: cover;
  }
 
  .matrix__table table {
@@ -3657,7 +3657,7 @@ body.en .dayoff .working-off__item:first-child {
   }
 
  .matrix__table table td {
-    padding: 28px;
+    padding: 21px 28px;
   }
 
   .matrix__table table td.fs35 {
@@ -3668,31 +3668,41 @@ body.en .dayoff .working-off__item:first-child {
     font-weight: 600;
     font-size: 28px;
     line-height: 160%;
-    position: absolute;
-    bottom: 22px;
-    left: 22px;
-    right: 22px;
+    padding:45px 20px 20px;
+    background: url(images/example-img-2.webp) top center no-repeat;
+    background-size: cover;
    }
 
    .example__table-title {
     display: flex;
-    padding: 12px 32px 22.4px;
+    padding: 12px 32px 35px;
     gap: 150px;
     background: #9FBAF1;
+   }
+
+   .example__table table {
+    border-collapse: collapse;
    }
 
     .example__table table td {
      vertical-align: middle;
      text-align: center;
-      padding: 30px 20px;
+      padding: 32px 20px;
+    }
+
+   body.en .example__table table td {
+      padding: 31px 20px;
     }
 
        .time__table {
         line-height: 160%;
-        position: absolute;
-        bottom: 22px;
-        left: 22px;
-        right: 22px;
+        padding:45px 20px 20px;
+        background: url(images/time-img-2.webp) top center no-repeat;
+        background-size: cover;
+      }
+
+      .time__table table {
+        border-collapse: collapse;
       }
 
       .time__table-title {
@@ -3705,10 +3715,10 @@ body.en .dayoff .working-off__item:first-child {
         display: flex;
         align-items: center;
         border-radius: 20px;
-        border: 8px solid var(--White, #FDFDF5);
+        border: 3px solid var(--White, #FDFDF5);
         background: var(--Light-Blue, #9FBAF1);
         color: var(--White, #FDFDF5);
-        padding: 6px 32px 6px 16px;
+        padding: 6px 32px;
         gap: 32px;
        }
 
@@ -3723,7 +3733,11 @@ body.en .dayoff .working-off__item:first-child {
 
          .time__table table td {
           vertical-align: middle;
-          padding: 30px 20px;
+          padding: 33px 20px;
+         }
+
+         body.en .time__table table td {
+          padding: 40px 20px;
          }
 
   .matrix__table table td.fs35 {
@@ -3734,11 +3748,14 @@ body.en .dayoff .working-off__item:first-child {
   font-weight: 600;
   font-size: 18px;
   line-height: 160%;
-  position: absolute;
-  bottom: 22px;
-  left: 22px;
-  right: 22px;
+  padding: 135px 20px 20px;
+  background: url(images/relocation-img-2.webp) top center no-repeat;
+  background-size: cover;
 }
+
+    .relocation__table table {
+        border-collapse: collapse;
+    }
 
  .relocation__table th {
       padding: 20px 10px;
